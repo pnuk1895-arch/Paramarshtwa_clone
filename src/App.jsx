@@ -41,7 +41,7 @@ import Statutory_InspectionsPage from './pages/OurServicePages/Statutory_Inspect
 import Quality_AssurancePage from './pages/OurServicePages/Quality_AssurancePage'
 import Post_Contract_EvalutionPage from './pages/OurServicePages/Post-Contract_EvalutionPage'
 import Technical_AuditsPage from './pages/OurServicePages/Technical_AuditsPage'
-import Contract_AdministrationPage from './pages/OurServicePages/COntract_AdministrationPage'
+import Contract_AdministrationPage from './pages/OurServicePages/Contract_AdministrationPage'
 import Construction_ManagementPage from './pages/OurServicePages/Construction_ManagementPage'
 
 
