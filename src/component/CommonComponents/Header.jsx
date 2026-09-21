@@ -72,7 +72,7 @@ const Header = () => {
             path: "/sectors",
             dropdown: true,
             Css: 'group',
-            contents: [['Building', [["Residential", "/Residential"], ["Commercial", "/Commercial"], ["Education, Institutional", "/Education_Institutional"], ["Health care", "/HealthCare"], ["Hotels And Resorts", "/Hotels_And_Resorts"], ["IT And IT Enabled", "/IT"], ["Retail", "/Retail"]]], ['Transport System', [["MRT/LRT", "/MRT_LRT"], ["Railways", "/Railways"], ["Highway And Bridges", "/Highway_And_Bridges"]]], ['Urban Infrastructure', '/Urban_infrastructure'], ['Urban Land Development', '/Urban_land_development'], ['Urban Renewal', '/Urban_Renewal'], ['Environmental', '/Environment'], ['Industrial/SEZ', '/Industrial/SEZ'], ['Sewage And Drainage', '/Sewage_and_Drainage'], ['Water Supply & Sanitation', 'Water_supply&sanitation'], ['Sport Complexes', '/Sport_complexes'], ['Aviation', '/Aviation']]
+            contents: [['Building', [["Residential", "/Residential"], ["Commercial", "/Commercial"], ["Education, Institutional", "/Education_Institutional"], ["Health care", "/HealthCare"], ["Hotels And Resorts", "/Hotels_And_Resorts"], ["IT And IT Enabled", "/IT_And_IT_Enabled"], ["Retail", "/Retail"]]], ['Transport System', [["MRT/LRT", "/MRT_LRT"], ["Railways", "/Railways"], ["Highway And Bridges", "/Highway_And_Bridges"]]], ['Urban Infrastructure', '/Urban_infrastructure'], ['Urban Land Development', '/Urban_land_development'], ['Urban Renewal', '/Urban_Renewal'], ['Environmental', '/Environment'], ['Industrial/SEZ', '/Industrial/SEZ'], ['Sewage And Drainage', '/Sewage_and_Drainage'], ['Water Supply & Sanitation', 'Water_supply&sanitation'], ['Sport Complexes', '/Sport_complexes'], ['Aviation', '/Aviation']]
 
         },
         {

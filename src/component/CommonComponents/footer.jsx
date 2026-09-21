@@ -13,12 +13,12 @@ import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const usefulLinks = [
-  "Home",
-  "About Us",
-  "Mission & Vision",
-  "Our Management",
-  "Our Team",
-  "Contact Us",
+  ["Home",'/'],
+  ["About Us","/About_Us"],
+  ["Mission & Vision","/Mission&Vision"],
+  ["Our Management","/Our_Management"],
+  ["Our Team","/Our_Team"],
+  ["Contact Us","Contact_us"],
 ];
 import logo from '/Logo.png'
 
@@ -99,10 +99,10 @@ export default function Footer() {
             </h3>
 
             <ul className="mt-6 space-y-5">
-              {usefulLinks.map((link) => (
+              {usefulLinks.map(([link,path]) => (
                 <li key={link}>
                   <Link
-                    href="#"
+                    to={path}
                     className="group flex items-center gap-2 text-sm text-white transition-colors duration-300 hover:text-orange-500 sm:text-base"
                   >
                     <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

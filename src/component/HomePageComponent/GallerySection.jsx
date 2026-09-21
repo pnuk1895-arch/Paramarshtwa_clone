@@ -1,35 +1,40 @@
 import { Plus } from "lucide-react";
-import image from '../../assets/AboutImage/AboutImage.png'
+import Image1 from "../../assets/OurGallery/Image1.png"
+import Image2 from "../../assets/OurGallery/Image2.png"
+import Image3 from "../../assets/OurGallery/Image3.png"
+import Image4 from "../../assets/OurGallery/Image4.png"
+import Image5 from "../../assets/OurGallery/Image5.png"
+import Image6 from "../../assets/OurGallery/Image6.png"
 
 const galleryImages = [
   {
     id: 1,
-    image: image,
+    image: Image1,
     alt: "Residential building",
   },
   {
     id: 2,
-    image: image,
+    image: Image2,
     alt: "Architectural project",
   },
   {
     id: 3,
-    image: image,
+    image: Image3,
     alt: "Residential project",
   },
   {
     id: 4,
-    image: image,
+    image: Image4,
     alt: "Villa project",
   },
   {
     id: 5,
-    image: image,
+    image: Image5,
     alt: "Commercial building",
   },
   {
     id: 6,
-    image: image,
+    image: Image6,
     alt: "Residential complex",
   },
 ];

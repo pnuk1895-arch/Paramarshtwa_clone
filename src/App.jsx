@@ -10,6 +10,9 @@ import MissionAndVisionPage from './pages/AboutPages/MissionAndVisionPage'
 import OurTeamPage from './pages/AboutPages/OurTeamPage'
 import OurManagementPage from './pages/AboutPages/OurManagementPage'
 
+// //contact page
+import ContactPage from './pages/ContactPage'
+
 // service 
 import ServicesPage from './pages/OurServicesPage'
 
@@ -43,6 +46,16 @@ import Post_Contract_EvalutionPage from './pages/OurServicePages/Post-Contract_E
 import Technical_AuditsPage from './pages/OurServicePages/Technical_AuditsPage'
 import Contract_AdministrationPage from './pages/OurServicePages/Contract_AdministrationPage'
 import Construction_ManagementPage from './pages/OurServicePages/Construction_ManagementPage'
+import ResidentialPage from './pages/Our_SectorsPages/BuildingPages.jsx/ResidentialPage'
+import CommercialPage from './pages/Our_SectorsPages/BuildingPages.jsx/CommercialPage'
+import Education_InstitutionalPage from './pages/Our_SectorsPages/BuildingPages.jsx/Education_Institutional'
+import HealthCarePage from './pages/Our_SectorsPages/BuildingPages.jsx/HealthCare'
+import HotelsAndResortsPage from './pages/Our_SectorsPages/BuildingPages.jsx/HotelsAndResorts'
+import IT_And_IT_EnabledPage from './pages/Our_SectorsPages/BuildingPages.jsx/IT_&_IT_Enabled'
+import RetailsPage from './pages/Our_SectorsPages/BuildingPages.jsx/Retails'
+import RailwaysPage from './pages/Our_SectorsPages/Transport_SystemPages/Railways'
+import MRT_LRTPage from './pages/Our_SectorsPages/Transport_SystemPages/MRT_LRT'
+import HighWay_And_BridgesPage from './pages/Our_SectorsPages/Transport_SystemPages/Highway_And_Bridges'
 
 
 const data = [
@@ -54,6 +67,8 @@ const data = [
   ['/Mission&Vision', MissionAndVisionPage],
   ['/Our_Team', OurTeamPage],
   ['/Our_Management', OurManagementPage],
+  //contact us
+  ["/Contact_Us", ContactPage],
   // Service component
   ['/Services', ServicesPage],
   // our services page 
@@ -87,10 +102,22 @@ const data = [
   ['/water_supply_And_sanitation', Water_S_A_SPage],
   ["/SportComlpexes", SportComlpexesPage],
   ["/Aviation", AviationPage],
-  // our Sectors /Building  
+  // our Sectors /Building 
+  ["/Residential", ResidentialPage],
+  ["/Commercial", CommercialPage],
+  ["/Education_Institutional", Education_InstitutionalPage],
+  ["/HealthCare", HealthCarePage],
+  ["/Hotels_And_Resorts", HotelsAndResortsPage],
+  ["/IT_And_IT_Enabled", IT_And_IT_EnabledPage],
+  ["/Retail", RetailsPage],
+  //Transport System
+  ["/Railways", RailwaysPage],
+  ["/MRT_LRT",MRT_LRTPage],
+  ["/Highway_And_Bridges",HighWay_And_BridgesPage]
 ]
 
 const App = () => {
+
   return (
     <Routes>
       {

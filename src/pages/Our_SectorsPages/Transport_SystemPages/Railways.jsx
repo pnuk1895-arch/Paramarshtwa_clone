@@ -1,0 +1,25 @@
+import Header from '../../../component/CommonComponents/Header'
+import Footer from '../../../component/CommonComponents/footer'
+import HeroSection from '../../../component/CommonComponents/heroSection'
+import CommonLayout from '../../../component/CommonComponents/OurSectors/CommonLayout'
+import Railways from "../../../assets/Transport_systems/Railways.png"
+
+export default function RailwaysPage()
+{
+ const data={
+    title:"Our Sector",
+    name:"Railways",
+    content:"We offer advanced railway solutions, focusing on infrastructure development, safety, efficiency, and modern technologies to enhance transportation networks.",
+    image:Railways
+ }
+  return (
+  <>
+  <Header/>
+  <main>
+    <HeroSection/>
+    <CommonLayout data={data}/>
+  </main>
+  <Footer/>
+  </>
+  )
+}
