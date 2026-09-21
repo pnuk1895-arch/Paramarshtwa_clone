@@ -72,7 +72,7 @@ const Header = () => {
             path: "/sectors",
             dropdown: true,
             Css: 'group',
-            contents: [['Building', [["Residential", "/Residential"], ["Commercial","/Commercial"], ["Education, Institutional","/Education_Institutional"], ["Health care","/HealthCare"], ["Hotels And Resorts", "/Hotels_And_Resorts"], ["IT And IT Enabled","/IT"], ["Retail", "/Retail"]]], ['Transport System', [["MRT/LRT","/MRT_LRT"],["Railways","/Railways"],["Highway And Bridges","/Highway_And_Bridges"]]], ['Urban Infrastructure', '/Urban_infrastructure'], ['Urban Land Development', '/Urban_land_development'], ['Urban Renewal', '/Urban_Renewal'], ['Environmental', '/Environment'], ['Industrial/SEZ', '/Industrial/SEZ'], ['Sewage And Drainage', '/Sewage_and_Drainage'], ['Water Supply & Sanitation', 'Water_supply&sanitation'], ['Sport Complexes', '/Sport_complexes'], ['Aviation', '/Aviation']]
+            contents: [['Building', [["Residential", "/Residential"], ["Commercial", "/Commercial"], ["Education, Institutional", "/Education_Institutional"], ["Health care", "/HealthCare"], ["Hotels And Resorts", "/Hotels_And_Resorts"], ["IT And IT Enabled", "/IT"], ["Retail", "/Retail"]]], ['Transport System', [["MRT/LRT", "/MRT_LRT"], ["Railways", "/Railways"], ["Highway And Bridges", "/Highway_And_Bridges"]]], ['Urban Infrastructure', '/Urban_infrastructure'], ['Urban Land Development', '/Urban_land_development'], ['Urban Renewal', '/Urban_Renewal'], ['Environmental', '/Environment'], ['Industrial/SEZ', '/Industrial/SEZ'], ['Sewage And Drainage', '/Sewage_and_Drainage'], ['Water Supply & Sanitation', 'Water_supply&sanitation'], ['Sport Complexes', '/Sport_complexes'], ['Aviation', '/Aviation']]
 
         },
         {
@@ -222,12 +222,12 @@ const Header = () => {
                                 <div
                                     onClick={Click}
                                     key={`${link.name}-${index}`}
-                                    className={`group relative px-4 py-6 text-xl text-slate-800 transition-all duration-300 ease-in-out hover:text-orange-600 before:absolute before:left-0 before:top-1/2 before:h-5 before:w-px before:-translate-y-1/2 before:bg-black cursor-pointer max-lg:text-lg ${link.Css}`}
+                                    className={`group relative px-4 py-6 text-xl text-slate-800 transition-all duration-300 ease-in-out hover:text-orange-600 before:absolute before:left-0 before:top-1/2 before:h-5 before:w-px before:-translate-y-1/2 before:bg-black cursor-pointer                       xl:text-xl max-xl:text-lg ${link.Css}`}
                                 >
                                     {link.name}
 
                                     {link.contents && (
-                                        <div className="invisible absolute left-0 top-20 z-50 w-58 origin-top -translate-y-3 scale-95 rounded-md border-t-4 border-red-700 bg-white opacity-0 shadow-lg transition-all duration-500 ease-out group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 will-change-transform">
+                                        <div className="invisible absolute left-0 top-20 z-50 w-58 origin-top -translate-y-3 scale-95 rounded-md border-t-4 border-red-700 bg-white opacity-0 shadow-lg transition-all duration-700 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 will-change-transform">
                                             {link.contents.map(([name, path], index) => (
                                                 name !== "Building" && name !== "Transport System" ? (
                                                     <Link
@@ -242,7 +242,7 @@ const Header = () => {
 
                                                         {/* The Trigger Item */}
                                                         <div className="flex cursor-pointer items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-800 hover:bg-black hover:text-white ">
-                                                            {name} <MdKeyboardArrowRight  className=" h-6 w-6 text-base transition-transform duration-300 " />
+                                                            {name} <MdKeyboardArrowRight className=" h-6 w-6 text-base transition-transform duration-300 " />
                                                         </div>
 
                                                         {/* The Nested Dropdown (Building -> sub-items) */}
@@ -274,7 +274,7 @@ const Header = () => {
                         {/* Enquire */}
                         <Link
                             to="tel:+91-9999997869"
-                            className="ml-8 flex h-full items-center justify-center bg-linear-to-r from-red-600 to-orange-500 px-10 text-xl font-medium text-white transition-all duration-500 ease-in-out hover:from-red-700 hover:to-orange-600 hover:shadow-inner lg:ml-20"
+                            className="ml-8 flex h-full items-center justify-center bg-linear-to-r from-red-600 to-orange-500 px-10 text-xl font-medium text-white transition-all duration-500 ease-in-out hover:from-red-700 hover:to-orange-600 hover:shadow-inner lg:ml-4 xl:ml-20"
                         >
                             Enquire Now
                         </Link>
@@ -303,21 +303,68 @@ const Header = () => {
 
                         {/* Navigation */}
                         <nav className="ml-auto flex h-full items-center transition-all duration-500 ease-in-out">
-                            {navLinks.map((link, index) => (
-                                <Link
-                                    key={`${link.name}-${index}`}
-                                    to={link.path}
-                                    className={`px-4 py-2 text-xl text-slate-800 transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:text-orange-600 ${index !== 0 ? "border-l border-slate-300" : ""
-                                        }`}
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
+                            {navLinks.map((link, index) => {
+                                const Click = ["/", "/contact", "/Services"].includes(link.path)
+                                    ? () => navigate(link.path)
+                                    : undefined;
+
+                                return (
+                                    <div
+                                        onClick={Click}
+                                        key={`${link.name}-${index}`}
+                                        className={`group relative px-4 py-6 text-xl text-slate-800 transition-all duration-300 ease-in-out hover:text-orange-600 before:absolute before:left-0 before:top-1/2 before:h-5 before:w-px before:-translate-y-1/2 before:bg-black cursor-pointer xl:text-xl max-xl:text-lg ${link.Css}`}
+                                    >
+                                        {link.name}
+
+                                        {link.contents && (
+                                            <div className="invisible absolute left-0 top-20 z-50 w-58 origin-top -translate-y-3 scale-95 rounded-md border-t-4 border-red-700 bg-white opacity-0 shadow-lg transition-all duration-700 ease-out group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 will-change-transform">
+                                                {link.contents.map(([name, path], index) => (
+                                                    name !== "Building" && name !== "Transport System" ? (
+                                                        <Link
+                                                            key={index}
+                                                            to={path}
+                                                            className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-800 hover:bg-black hover:text-white "
+                                                        >
+                                                            {name}
+                                                        </Link>
+                                                    ) : (
+                                                        <div key={index} className="group/sub relative">
+
+                                                            {/* The Trigger Item */}
+                                                            <div className="flex cursor-pointer items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-800 hover:bg-black hover:text-white ">
+                                                                {name} <MdKeyboardArrowRight className=" h-6 w-6 text-base transition-transform duration-300 " />
+                                                            </div>
+
+                                                            {/* The Nested Dropdown (Building -> sub-items) */}
+                                                            {/* Added: pointer-events-none and group-hover/sub:pointer-events-auto */}
+                                                            {/* Double check: Ensure absolutely NO "group-hover:" classes are in this div, ONLY "group-hover/sub:" */}
+                                                            <div className="pointer-events-none invisible absolute left-full top-0 z-50 w-58 origin-top-left -translate-y-2 scale-95 rounded-md border-t-4 border-red-700 bg-white opacity-0 shadow-lg transition-all duration-400 ease-out group-hover/sub:pointer-events-auto group-hover/sub:visible group-hover/sub:translate-y-0 group-hover/sub:scale-100 group-hover/sub:opacity-100 will-change-transform">
+
+                                                                {/* Note: In your original code, `path` was mapped here as if it was an array. Ensure `path` is actually an array of sub-links in your data structure for "Building". */}
+                                                                {Array.isArray(path) && path.map(([content, path], idx) => (
+                                                                    <Link
+                                                                        key={idx}
+                                                                        to={path}
+                                                                        className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-800 hover:bg-black hover:text-white"
+                                                                    >
+                                                                        {content}
+                                                                    </Link>
+                                                                ))}
+                                                            </div>
+
+                                                        </div>
+                                                    )
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            })}
 
                             {/* Enquire */}
                             <Link
                                 to="tel:+91-9999997869"
-                                className="ml-8 flex h-full items-center justify-center bg-linear-to-r from-red-600 to-orange-500 px-10 text-xl font-medium text-white transition-all duration-500 ease-in-out hover:from-red-700 hover:to-orange-600 hover:shadow-inner lg:ml-20"
+                                className="ml-8 flex h-full items-center justify-center bg-linear-to-r from-red-600 to-orange-500 px-10 text-xl font-medium text-white transition-all duration-500 ease-in-out hover:from-red-700 hover:to-orange-600 hover:shadow-inner lg:ml-4 xl:ml-20"
                             >
                                 Enquire Now
                             </Link>
@@ -361,7 +408,6 @@ const Header = () => {
                         </Link>
 
                     ))}
-
                 </nav>
 
             </div>

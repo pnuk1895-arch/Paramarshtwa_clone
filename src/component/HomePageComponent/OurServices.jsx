@@ -1,6 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { FaArrowRight } from "react-icons/fa";
+import Architecture from "../../assets/OurServices/Architecture.png"
+import MasterPlanning from "../../assets/OurServices/MasterPlanning.png"
+import FeasibilityStudies from "../../assets/OurServices/Feasibility.png"
+import ProjectManagement from "../../assets/OurServices/ProjectManagement.png"
 
 import "swiper/css";
 
@@ -9,25 +13,25 @@ const services = [
         title: "Master planning",
         description:
             "Master planning is a comprehensive approach to the long-term development and design of a specific area, such as a city, community.",
-        image: "/images/master-planning.jpg",
+        image: MasterPlanning,
     },
     {
         title: "Architecture",
         description:
             "Architecture is the art and science of designing and constructing buildings, structures, and spaces that are functional, aesthetically pleasing.",
-        image: "/images/architecture.jpg",
+        image: Architecture
     },
     {
         title: "Feasibility studies",
         description:
             "Feasibility studies are assessments conducted to evaluate the viability of a project or initiative before it is undertaken.",
-        image: "/images/feasibility.jpg",
+        image: FeasibilityStudies
     },
     {
         title: "Project Management",
         description:
             "Project management involves the planning, organization, and execution of a project to achieve specific goals within a defined timeframe and budget.",
-        image: "/images/project-management.jpg",
+        image: ProjectManagement
     },
 ];
 
