@@ -21,6 +21,7 @@ const usefulLinks = [
   ["Contact Us","Contact_us"],
 ];
 import logo from '/Logo.png'
+const Evermore="https://www.evermolpro.com/"
 
 export default function Footer() {
   return (
@@ -165,7 +166,7 @@ export default function Footer() {
       <div className="bg-orange-600 px-6 py-5 text-center">
         <p className="text-sm text-white sm:text-base">
           All rights reserved. Designed &amp; Developed By :
-          <span className="font-semibold"> Evermore Tech</span>
+          <Link to={Evermore} target="_blank" className="font-semibold"> Evermore Tech</Link>
         </p>
       </div>
     </footer>

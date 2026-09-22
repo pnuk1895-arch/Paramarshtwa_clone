@@ -69,7 +69,7 @@ const HeroSection = () => {
       </Swiper>
 
       {/* 3. Map your custom React dots over the array */}
-      <div className="absolute right-4 top-2/3 z-10 flex -translate-y-1/2 flex-col items-center gap-3 sm:right-5 md:right-6 lg:right-30">
+      <div className="absolute right-4 top-2/3 z-5 flex -translate-y-1/2 flex-col items-center gap-3 sm:right-5 md:right-6 lg:right-30">
         {sliderImages.map((_, index) => {
           const isActive = activeIndex === index;
 

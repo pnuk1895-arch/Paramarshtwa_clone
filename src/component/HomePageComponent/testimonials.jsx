@@ -16,16 +16,16 @@ const testimonials = [
   },
   {
     name: "MR. RAVI KUMAR",
-    image: ProfileImage,
+    image: ProfileImage
   },
 ];
 
 const testimonialText =
-  "SCMG is being set up through an extension to Space Combine; ahead in architecture and engineering and other tied, & putsup to project management. SCMG delivers sustainable results by partnering with clients to transfer knowledge, wisdom and skills to ensure long term success applied through all services under one roof.";
+  ["SCMG is being set up through an extension to Space Combine; ahead in architecture and engineering and other tied, & putsup to project management. SCMG delivers sustainable results by partnering with clients to transfer knowledge, wisdom and skills to ensure long term success applied through all services under one roof."]
 
 export default function Testimonials() {
   return (
-    <section className="bg-slate-950 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <section className="bg-slate-950 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 ">
 
       <div className="mx-auto max-w-7xl">
 
@@ -41,9 +41,21 @@ export default function Testimonials() {
           loop={true}
           centeredSlides={true}
           autoplay={{ delay: 3500, disableOnInteraction: false }}
-          slidesPerView={3}
+          slidesPerView={1}
           slidesPerGroup={1}
-          className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-10 sm:mt-20 sm:grid-cols-3 sm:gap-6 lg:mt-18 lg:gap-12">
+          spaceBetween={30} // Adds gap between slides
+          // 2. Use breakpoints to change to 3 slides on screens 640px and wider
+          breakpoints={{
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            }
+          }}
+          className="mx-auto mt-16 max-w-5xl sm:mt-20 lg:mt-18 max-md:shrink-0 ">
 
           {[...testimonials, ...testimonials].map((testimonial, index) => (
             <SwiperSlide key={index}>
@@ -67,46 +79,58 @@ export default function Testimonials() {
               </div>
             </SwiperSlide>
           ))}
-
         </Swiper>
 
-        <div className="flex flex-col items-center">
-
-          <div className="mt-8 h-12 w-0.5 bg-orange-500" />
-
-          {/* ================= TESTIMONIAL TEXT ================= */}
-          <div className="mx-auto mt-8 max-w-6xl text-center sm:mt-10 lg:mt-8">
-
-            <p className="text-sm leading-7 text-white sm:text-base sm:leading-8 lg:text-lg lg:leading-9">
-              {testimonialText}
-            </p>
-
-          </div>
 
 
-          {/* ================= QUOTE DECORATION ================= */}
-          <div className="mx-auto mt-10 w-full flex max-w-xs items-center justify-center sm:mt-12">
+        <Swiper
+          modules={[Autoplay]}
+          loop={true}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          slidesPerView={1}
+          slidesPerGroup={1}
 
-            {/* Left Line */}
-            <span className="h-0.5 flex-1 bg-orange-500" />
+        >
+          {[...testimonialText, ...testimonialText].map((content, index) => (
+            <SwiperSlide key={index}>
+              <div className="flex flex-col items-center">
 
-            {/* Quote Circle */}
-            <div className="mx-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white">
-              <Quote
-                className="h-5 w-5 text-red-600"
-                fill="currentColor"
-              />
-            </div>
+                <div className="mt-8 h-12 w-0.5 bg-orange-500" />
 
-            {/* Right Line */}
-            <span className="h-0.5 flex-1 bg-orange-500" />
+                {/* ================= TESTIMONIAL TEXT ================= */}
+                <div className="mx-auto mt-8 max-w-6xl text-center sm:mt-10 lg:mt-8">
 
-          </div>
+                  <p className="text-sm leading-7 text-white sm:text-base sm:leading-8 lg:text-lg lg:leading-9">
+                    {content}
+                  </p>
 
-        </div>
+                </div>
+
+
+                {/* ================= QUOTE DECORATION ================= */}
+                <div className="mx-auto mt-10 w-full flex max-w-xs items-center justify-center sm:mt-12">
+
+                  {/* Left Line */}
+                  <span className="h-0.5 flex-1 bg-orange-500" />
+
+                  {/* Quote Circle */}
+                  <div className="mx-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white">
+                    <Quote
+                      className="h-5 w-5 text-red-600"
+                      fill="currentColor"
+                    />
+                  </div>
+
+                  {/* Right Line */}
+                  <span className="h-0.5 flex-1 bg-orange-500" />
+
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
       </div>
-
 
     </section>
   );

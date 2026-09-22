@@ -14,6 +14,8 @@ const Services = [
 
 const CommonLayout = ({ data }) => {
 
+    
+
     return (
         <section className="bg-white px-4 py-12 sm:px-6 md:px-8 lg:px-10 xl:px-12 transition-all duration-500 ease-in-out">
             <div className=" mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-3 transition-all duration-500 ease-in-out">
@@ -23,7 +25,7 @@ const CommonLayout = ({ data }) => {
                         <img
                             src={data.image}
                             alt={data.name || ''}
-                            className="w-full object-cover object-center transition-transform duration-600 group-hover:scale-110 will-change-transform"
+                            className="w-full object-cover object-center transition-transform duration-600 group-hover:scale-105 will-change-transform"
                         />
                         <div className="absolute inset-0 invisible transition-all group-hover:visible bg-red-400 opacity-40  "> 
                         </div>
@@ -45,12 +47,12 @@ const CommonLayout = ({ data }) => {
                             {data.title}
                         </h1>
                         <div className="mt-6 w-full">
-                            <ul className="flex flex-col gap-2">
+                            <ul className="flex flex-col ">
                                 {Services.map(([Path, Name], index) => (
                                     <li key={index}>
                                         <Link
                                             to={Path}
-                                            className="border-2 border-gray-200 block px-8 py-4 text-gray-600 text-base transition-all duration-300 ease-in-out hover:border-red-400 hover:bg-red-50 hover:text-red-500 hover:translate-x-1 will-change-transform"
+                                            className="border-2 border-gray-200 block px-8 py-4 text-gray-600 text-base transition-all duration-500 ease-in-out hover:bg-orange-600 hover:text-white will-change-transform"
                                         >
                                             {Name}
                                         </Link>

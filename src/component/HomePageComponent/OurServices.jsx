@@ -44,7 +44,7 @@ export default function OurServices() {
     ];
 
     return (
-        <section className="w-full h-160 overflow-hidden bg-slate-950 py-12">
+        <section className=" w-full h-160 overflow-hidden bg-slate-950 py-12 ">
 
             {/* ================= HEADING ================= */}
             <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -57,9 +57,10 @@ export default function OurServices() {
 
 
             {/* ================= CARDS ================= */}
-            <div className="max-w-7xl w-full min-[1190px]:translate-x-38 h-110">
+            <div className=" w-full h-116 sm:max-h-110 sm:px-2 lg:max-h-110 xl:pl-34 xl:h-120 overflow-hidden ">
 
                 <Swiper
+
                     modules={[Autoplay]}
 
                     loop={true}
@@ -76,18 +77,18 @@ export default function OurServices() {
 
                     slidesPerView={5}
                     slidesPerGroup={1}
-                    spaceBetween={0}
+                    spaceBetween={1}
 
                     breakpoints={{
                         0: {
-                            slidesPerView: 1.2,
+                            slidesPerView: 1,
                         },
 
                         640: {
                             slidesPerView: 2,
                         },
 
-                        1190: {
+                        1024: {
                             slidesPerView: 3
                         },
 
@@ -103,7 +104,7 @@ export default function OurServices() {
 
                             <div className="px-2">
 
-                                <article className="group flex flex-col overflow-hidden bg-white">
+                                <article className="group flex flex-col overflow-hidden bg-white  ">
 
                                     {/* IMAGE */}
                                     <div className="relative aspect-video overflow-hidden">

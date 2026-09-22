@@ -62,11 +62,11 @@ export default function Gallery() {
               <img
                 src={item.image}
                 alt={item.alt}
-                className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="aspect-video w-full object-covera"
               />
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-orange-600/85 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="absolute inset-0 invisible flex items-center justify-center bg-[#D1641A] opacity transition-all duration-300  ">
                 <button
                   type="button"
                   aria-label={`View ${item.alt}`}

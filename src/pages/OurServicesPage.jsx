@@ -4,10 +4,15 @@ import HeroSection from '../component/CommonComponents/heroSection'
 import Services from '../component/Services.jsx/Services'
 
 const ServicesPage = () => {
+
+  const Page={
+    Category:"Our Services",
+    name:"Our Services"
+  }
   return (
     <>
     <Header/>
-    <HeroSection/>
+    <HeroSection Page={Page} />
     <Services/>
     <Footer/>
     
