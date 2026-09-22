@@ -90,7 +90,7 @@ export default function JoinOurTeam() {
 
 
             {/* CONTACT BOX */}
-            <div className="absolute left-50 -bottom-22 z-10 grid grid-cols-1 overflow-hidden rounded-3xl border-4 border-white bg-orange-600 max-md:hidden  lg:max-w-6xl lg:grid-cols-2 lg:rounded-full">
+            <div className="absolute left-50 -bottom-22 z-3 grid grid-cols-1 overflow-hidden rounded-3xl border-4 border-white bg-orange-600 max-md:hidden  lg:max-w-6xl lg:grid-cols-2 lg:rounded-full">
 
                 {/* ADDRESS */}
                 <div className="flex items-center gap-5 p-6 sm:p-8 lg:px-10 lg:py-7">
