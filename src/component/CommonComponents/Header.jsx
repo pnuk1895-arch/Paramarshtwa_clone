@@ -136,7 +136,7 @@ const Header = () => {
 
             {/* TOP BAR */}
 
-            <div className="relative bg-slate-900 text-white transition-all duration-500 ease-in-out">
+            <div className="relative bg-slate-900 text-white transition-all duration-500 ease-in-out ">
                 <div className="mx-auto flex h-12 w-full max-w-7xl items-center justify-center md:justify-between px-4 sm:px-6 lg:px-8 transition-all duration-500 ease-in-out">
 
                     {/* Phone + Email */}
@@ -144,7 +144,7 @@ const Header = () => {
                     <div className="flex items-center overflow-hidden whitespace-nowrap transition-all duration-500 ease-in-out max-md:max-w-0 max-md:gap-0 max-md:opacity-0 md:max-w-xl md:gap-6 md:opacity-100">
                         <Link
                             href="tel:+91999997869"
-                            className="flex items-center gap-2 text-sm transition-all duration-300 ease-in-out hover:text-orange-400"
+                            className="flex items-center gap-2 text-base transition-all duration-300 ease-in-out hover:text-orange-400"
                         >
                             <FaPhoneAlt />
                             <span>+91-9999997869</span>
@@ -152,7 +152,7 @@ const Header = () => {
 
                         <Link
                             href="mailto:info@paramarshtwa.in"
-                            className="flex items-center gap-2 text-sm transition-all duration-300 ease-in-out hover:text-orange-400"
+                            className="flex items-center gap-2 text-base transition-all duration-300 ease-in-out hover:text-orange-400"
                         >
                             <FaEnvelope />
                             <span>info@paramarshtwa.in</span>
@@ -161,7 +161,7 @@ const Header = () => {
 
                     {/* Social Icons */}
                     {/* Removed 'md:absolute md:right-7' to keep it in the normal Flexbox flow, allowing smooth gliding during window resizing */}
-                    <div className="flex items-center gap-5 transition-all duration-500 ease-in-out">
+                    <div className=" md:absolute md:right-6 flex items-center gap-5 transition-all duration-500 ease-in-out">
                         <Link
                             href="#"
                             aria-label="Facebook"
@@ -227,13 +227,13 @@ const Header = () => {
                                     {link.name}
 
                                     {link.contents && (
-                                        <div className="invisible absolute left-0 top-20 z-50 w-58 origin-top -translate-y-3 scale-95 rounded-md border-t-4 border-red-700 bg-white opacity-0 shadow-lg transition-all duration-700 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 will-change-transform">
+                                        <div className="invisible absolute left-0 top-20 z-50 w-58 origin-top -translate-y-3 scale-95 rounded-md border-t-4 border-red-700 bg-white opacity-0 shadow-lg transition-all duration-400 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 will-change-transform">
                                             {link.contents.map(([name, path], index) => (
                                                 name !== "Building" && name !== "Transport System" ? (
                                                     <Link
                                                         key={index}
                                                         to={path}
-                                                        className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-800 hover:bg-black hover:text-white "
+                                                        className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-400 hover:bg-black hover:text-white "
                                                     >
                                                         {name}
                                                     </Link>
@@ -241,7 +241,7 @@ const Header = () => {
                                                     <div key={index} className="group/sub relative">
 
                                                         {/* The Trigger Item */}
-                                                        <div className="flex cursor-pointer items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-800 hover:bg-black hover:text-white ">
+                                                        <div className="flex cursor-pointer items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-400 hover:bg-black hover:text-white ">
                                                             {name} <MdKeyboardArrowRight className=" h-6 w-6 text-base transition-transform duration-300 " />
                                                         </div>
 
@@ -255,7 +255,7 @@ const Header = () => {
                                                                 <Link
                                                                     key={idx}
                                                                     to={path}
-                                                                    className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-800 hover:bg-black hover:text-white"
+                                                                    className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-400 hover:bg-black hover:text-white"
                                                                 >
                                                                     {content}
                                                                 </Link>
@@ -317,13 +317,13 @@ const Header = () => {
                                         {link.name}
 
                                         {link.contents && (
-                                            <div className="invisible absolute left-0 top-20 z-50 w-58 origin-top -translate-y-3 scale-95 rounded-md border-t-4 border-red-700 bg-white opacity-0 shadow-lg transition-all duration-700 ease-out group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 will-change-transform">
+                                            <div className="invisible absolute left-0 top-20 z-50 w-58 origin-top -translate-y-3 scale-95 rounded-md border-t-4 border-red-700 bg-white opacity-0 shadow-lg transition-all duration-400 ease-out group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 will-change-transform">
                                                 {link.contents.map(([name, path], index) => (
                                                     name !== "Building" && name !== "Transport System" ? (
                                                         <Link
                                                             key={index}
                                                             to={path}
-                                                            className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-800 hover:bg-black hover:text-white "
+                                                            className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-400 hover:bg-black hover:text-white "
                                                         >
                                                             {name}
                                                         </Link>
@@ -331,7 +331,7 @@ const Header = () => {
                                                         <div key={index} className="group/sub relative">
 
                                                             {/* The Trigger Item */}
-                                                            <div className="flex cursor-pointer items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-800 hover:bg-black hover:text-white ">
+                                                            <div className="flex cursor-pointer items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-400 hover:bg-black hover:text-white ">
                                                                 {name} <MdKeyboardArrowRight className=" h-6 w-6 text-base transition-transform duration-300 " />
                                                             </div>
 
@@ -345,7 +345,7 @@ const Header = () => {
                                                                     <Link
                                                                         key={idx}
                                                                         to={path}
-                                                                        className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-800 hover:bg-black hover:text-white"
+                                                                        className="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-4 py-3 text-base text-slate-700 transition-all duration-400 hover:bg-black hover:text-white"
                                                                     >
                                                                         {content}
                                                                     </Link>

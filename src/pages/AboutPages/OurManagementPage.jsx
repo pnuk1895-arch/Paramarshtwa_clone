@@ -15,11 +15,16 @@ import TheCoreDesign from "../../component/OurManagementComponent/TheCoreDesign"
 
 const OurManagementPage = () => {
 
+   const Page={
+    Category:"Our Management",
+    name:"Our Management"
+  }
+
   return (
     <>
     <Header/>
     <main className="w-full">
-      <HeroSection/>
+      <HeroSection Page={Page} />
       <NewFaceOfProjectManagement/>
       <ModernizedProjectsManagement/>
       <ConstructionManagementComponent/>

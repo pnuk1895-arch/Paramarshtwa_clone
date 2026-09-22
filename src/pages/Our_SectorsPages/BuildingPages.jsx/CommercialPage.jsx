@@ -12,6 +12,10 @@ export default function CommercialPage()
     content:"We guarantee practicality, contemporary style, regulatory conformity, and lasting value for companies by providing commercial solutions that are creative, effective.",
     image:Commercial
  }
+  const Page={
+    Category:"Building",
+    name:"Commercial"
+  }
   return (
   <>
   <Header/>

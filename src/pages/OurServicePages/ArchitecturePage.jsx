@@ -13,14 +13,17 @@ import image from '../../assets/OurServices/Architecture.png'
     Image:image
   }
   
-  
+  const Page={
+  Category:"Our Services",
+  name:"Architacture"
+ }
 
   return (
 
     <>
        <Header/>
        <main>
-           <HeroSection/>
+           <HeroSection Page={Page} />
            <CommonLayout data={data} sectors />
        </main>
        <Footer/>

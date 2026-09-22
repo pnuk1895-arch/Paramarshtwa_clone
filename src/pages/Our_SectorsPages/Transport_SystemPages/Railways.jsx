@@ -4,22 +4,25 @@ import HeroSection from '../../../component/CommonComponents/heroSection'
 import CommonLayout from '../../../component/CommonComponents/OurSectors/CommonLayout'
 import Railways from "../../../assets/Transport_systems/Railways.png"
 
-export default function RailwaysPage()
-{
- const data={
-    title:"Our Sector",
-    name:"Railways",
-    content:"We offer advanced railway solutions, focusing on infrastructure development, safety, efficiency, and modern technologies to enhance transportation networks.",
-    image:Railways
- }
+export default function RailwaysPage() {
+  const data = {
+    title: "Our Sector",
+    name: "Railways",
+    content: "We offer advanced railway solutions, focusing on infrastructure development, safety, efficiency, and modern technologies to enhance transportation networks.",
+    image: Railways
+  }
+  const Page = {
+    Category: "Transport System",
+    name: "Railways"
+  }
   return (
-  <>
-  <Header/>
-  <main>
-    <HeroSection/>
-    <CommonLayout data={data}/>
-  </main>
-  <Footer/>
-  </>
+    <>
+      <Header />
+      <main>
+        <HeroSection Page={Page} />
+        <CommonLayout data={data} />
+      </main>
+      <Footer />
+    </>
   )
 }

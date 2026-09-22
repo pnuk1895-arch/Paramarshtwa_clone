@@ -12,11 +12,15 @@ export default function Post_Contract_EvalutionPage() {
     content:
       "Post-contract evaluation is the process of assessing a project or contract after its completion to analyze its success and identify areas for improvement. This evaluation examines factors such as project performance, adherence to timelines, quality of work, budget compliance, and stakeholder satisfaction. It involves reviewing both the contract's terms and the actual outcomes, providing valuable insights into the efficiency of the project management process.",
   }
+  const Page = {
+    Category: "Our Services",
+    name: "Post-Contract Evalution"
+  }
   return (
     <>
       <Header />
       <main>
-        <HeroSection />
+        <HeroSection Page={Page} />
         <CommonLayout data={data} />
       </main>
       <Footer />

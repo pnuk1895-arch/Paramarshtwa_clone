@@ -11,12 +11,17 @@ const data={
   image:image
 }
 
+const Page ={
+    Category:"Our Services",
+    name:"Feasibility Studies"
+  }
+
 const Feasibility_studiesPage = () => {
   return (
     <>
         <Header/>
         <main>
-            <HeroSection/>
+            <HeroSection Page={Page} />
             <CommonLayout data={data}/>
         </main>
         <Footer/>

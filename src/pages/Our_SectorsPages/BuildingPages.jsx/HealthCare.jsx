@@ -12,11 +12,15 @@ export default function HealthCarePage()
     content:"We deliver state-of-the-art healthcare facilities, ensuring optimal patient care, compliance with regulations, safety standards, and long-term operational efficiency.",
     image:Health
  }
+ const Page={
+  Category:"Building",
+  name:"Health Care"
+ }
   return (
   <>
   <Header/>
   <main>
-    <HeroSection/>
+    <HeroSection Page={Page} />
     <CommonLayout data={data}/>
   </main>
   <Footer/>

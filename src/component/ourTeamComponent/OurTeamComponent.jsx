@@ -1,4 +1,9 @@
-
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn
+} from "react-icons/fa";
 
 const teamMembers = [
   {
@@ -56,7 +61,7 @@ const OurTeamComponent = () => {
           {teamMembers.map((member) => (
             <article
               key={member.id}
-              className="overflow-hidden rounded-sm bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="relative rounded-sm bg-white shadow-sm transition duration-300  group"
             >
 
               {/* ================= IMAGE ================= */}
@@ -65,7 +70,7 @@ const OurTeamComponent = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="h-96 w-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                  className="h-96 w-full object-cover object-top transition-transform duration-500"
                 />
 
               </div>
@@ -82,6 +87,13 @@ const OurTeamComponent = () => {
                   {member.position}
                 </p>
 
+              </div>
+
+              <div className="absolute z-10 invisible flex justify-center items-center gap-4 rounded-sm bg-white shadow-[0_0_15px_rgba(0,0,0,0.15)] w-full h-10 opacity-0 -translate-y-10 transition-all duration-300 ease-linear group-hover:translate-y-0 group-hover:visible group-hover:opacity-100 ">
+                <FaFacebookF className="text-blue-900"/>
+                <FaTwitter className="text-blue-400" />
+                <FaInstagram className="text-red-700" />
+                <FaLinkedinIn className="text-[#228abf]" />
               </div>
 
             </article>

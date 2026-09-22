@@ -5,10 +5,14 @@ import DetailAbout from "../../component/HomePageComponent/detailAbout"
 
 
 const MissionAndVisionPage = () => {
+   const Page={
+    Category:"Mission And Vision",
+    name:"Mission And Vision"
+  }
   return (
     <>
         <Header/>
-        <HeroSection/>
+        <HeroSection Page={Page} />
         <DetailAbout/>
         <Footer/>
     </>

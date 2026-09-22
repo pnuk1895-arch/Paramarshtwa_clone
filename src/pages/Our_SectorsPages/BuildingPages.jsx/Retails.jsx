@@ -4,22 +4,26 @@ import HeroSection from '../../../component/CommonComponents/heroSection'
 import CommonLayout from '../../../component/CommonComponents/OurSectors/CommonLayout'
 import Retail from "../../../assets/Building/Retail.png"
 
-export default function RetailsPage()
-{
- const data={
-    title:"Our Sector",
-    name:"Retails",
-    content:"We offer innovative retail solutions, focusing on functional design, customer experience, sustainability, and seamless integration for businesses' growth.",
-    image:Retail
- }
+export default function RetailsPage() {
+  const data = {
+    title: "Our Sector",
+    name: "Retails",
+    content: "We offer innovative retail solutions, focusing on functional design, customer experience, sustainability, and seamless integration for businesses' growth.",
+    image: Retail
+  }
+  const Page = {
+    Category: "Building",
+    name: "Residential"
+  }
+
   return (
-  <>
-  <Header/>
-  <main>
-    <HeroSection/>
-    <CommonLayout data={data}/>
-  </main>
-  <Footer/>
-  </>
+    <>
+      <Header />
+      <main>
+        <HeroSection Page={Page} />
+        <CommonLayout data={data} />
+      </main>
+      <Footer />
+    </>
   )
 }

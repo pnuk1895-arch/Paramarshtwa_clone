@@ -12,11 +12,15 @@ export default function HotelsAndResortsPage()
     content:"We create luxurious, sustainable hotel and resort spaces, blending comfort, modern amenities, eco-friendly designs, and exceptional guest experiences.",
     image:HotelsAndResorts
  }
+ const Page={
+  Category:"Building",
+  name:"Residential"
+ }
   return (
   <>
   <Header/>
   <main>
-    <HeroSection/>
+    <HeroSection Page={Page} />
     <CommonLayout data={data}/>
   </main>
   <Footer/>

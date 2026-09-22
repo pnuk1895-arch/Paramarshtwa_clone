@@ -12,11 +12,15 @@ export default function Contract_AdministrationPage() {
     content:
       "Contract administration is the process of managing and overseeing the execution of a contract to ensure that all parties fulfill their obligations as agreed. It involves monitoring the progress of the project, ensuring compliance with terms and conditions, and addressing any issues or disputes that arise during execution. Contract administration includes managing documentation, reviewing change orders, ensuring timely payments, and maintaining communication between stakeholders. This process also involves tracking timelines, performance, and costs to ensure the project stays within scope and budget.",
   }
+  const Page = {
+    Category: "Our Services",
+    name: "Contract Adminstration"
+  }
   return (
     <>
       <Header />
       <main>
-        <HeroSection />
+        <HeroSection Page={Page} />
         <CommonLayout data={data} />
       </main>
       <Footer />

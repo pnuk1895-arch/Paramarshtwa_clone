@@ -11,11 +11,15 @@ export default function AviationPage() {
     content: "Aviation refers to the design, development, operation, and use of aircraft, including airplanes, helicopters, and drones. It plays a critical role in modern transportation, connecting people and goods across vast distances, enabling faster travel and global trade. The history of aviation dates back to the early 20th century, with pioneers like the Wright brothers achieving powered flight in 1903. Over time, aviation technology has advanced significantly, leading to the development of commercial airliners, military aircraft, and spacecraft. The aviation industry includes various sectors, such as civil, military, and cargo aviation. Civil aviation encompasses passenger and freight transport, while military aviation focuses on defense and combat operations.",
     image: Aviation
   }
+  const Page = {
+    Category: "Our Sectors",
+    name: "Aviation"
+  }
   return (
     <>
       <Header />
       <main>
-        <HeroSection />
+        <HeroSection Page={Page} />
         <CommonLayout data={data} />
       </main>
       <Footer />

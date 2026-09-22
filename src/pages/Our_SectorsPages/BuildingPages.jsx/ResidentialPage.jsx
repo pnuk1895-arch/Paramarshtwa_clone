@@ -12,11 +12,15 @@ export default function ResidentialPage()
     content:"Residential We deliver creative, sustainable, and high-quality residential solutions, ensuring comfort, safety, modern design, and long-term value for homeowners and communities.",
     image:Residential
  }
+ const Page={
+  Category:"Building",
+  name:"Residential"
+ }
   return (
   <>
   <Header/>
   <main>
-    <HeroSection/>
+    <HeroSection Page={Page}/>
     <CommonLayout data={data}/>
   </main>
   <Footer/>

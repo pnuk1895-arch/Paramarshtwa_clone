@@ -12,6 +12,10 @@ export default function Education_InstitutionalPage()
     content:"With an eye toward efficiency, security, compliance, and long-term worth, we plan and construct educational and institutional facilities that are novel, environmentally friendly.",
     image:Image
  }
+  const Page={
+    Category:"Building",
+    name:"Education, Institutional"
+  }
   return (
   <>
   <Header/>

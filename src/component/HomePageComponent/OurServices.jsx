@@ -57,7 +57,7 @@ export default function OurServices() {
 
 
             {/* ================= CARDS ================= */}
-            <div className="w-[90%] ml-38 h-100">
+            <div className="max-w-7xl w-full min-[1190px]:translate-x-38 h-110">
 
                 <Swiper
                     modules={[Autoplay]}
@@ -74,7 +74,7 @@ export default function OurServices() {
 
                     allowTouchMove={true}
 
-                    slidesPerView={4.5}
+                    slidesPerView={5}
                     slidesPerGroup={1}
                     spaceBetween={0}
 
@@ -84,11 +84,11 @@ export default function OurServices() {
                         },
 
                         640: {
-                            slidesPerView: 2.5,
+                            slidesPerView: 2,
                         },
 
-                        1024: {
-                            slidesPerView: 3.5,
+                        1190: {
+                            slidesPerView: 3
                         },
 
                         1280: {

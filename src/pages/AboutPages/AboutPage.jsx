@@ -4,12 +4,16 @@ import Footer from "../../component/CommonComponents/footer"
 import HeroSection from '../../component/CommonComponents/heroSection'
 
 export default function AboutPage() {
+  const Page={
+    Category:"About Us",
+    name:"About Us"
+  }
   return (
-    <div className="relative">
-    <Header/>
-    <HeroSection />
-    <About/>
-    <Footer/>
-    </div>
+    <>
+      <Header/>
+      <HeroSection Page={Page} />
+      <About/>
+      <Footer/>
+    </>
   )
 }
