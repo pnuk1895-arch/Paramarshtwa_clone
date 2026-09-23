@@ -2,7 +2,7 @@ import CommonLayout from "../../component/CommonComponents/OurServices/CommonLay
 import Footer from "../../component/CommonComponents/footer"
 import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
-import image from '../../assets/OurServices/Architecture.png'
+import image from "../../assets/OurServices/Architecture.png"
 
  const ArchitecturePage = () => {
 
@@ -10,7 +10,7 @@ import image from '../../assets/OurServices/Architecture.png'
     title:"Our Sectors",
     name:"Architecture",
     content:"Architecture is the art and science of designing and constructing buildings, structures, and spaces that are functional, aesthetically pleasing, and sustainable. It blends creativity, engineering, and technology to create environments that meet the needs of individuals, communities, and businesses. Architects consider factors like form, function, safety, and environmental impact when designing spaces, from residential homes to commercial buildings and urban landscapes. Modern architecture incorporates sustainable practices, such as energy-efficient designs and eco-friendly materials, to reduce the environmental impact.",
-    Image:image
+    image:image
   }
   
   const Page={
@@ -24,7 +24,7 @@ import image from '../../assets/OurServices/Architecture.png'
        <Header/>
        <main>
            <HeroSection Page={Page} />
-           <CommonLayout data={data} sectors />
+           <CommonLayout data={data} />
        </main>
        <Footer/>
     </>

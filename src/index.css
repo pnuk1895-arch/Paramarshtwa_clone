@@ -1,13 +1,41 @@
 @import "tailwindcss";
 
 @theme {
---font-poppins: "Poppins", sans-serif;
---font-Montserrat: "Montserrat", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-Montserrat: "Montserrat", sans-serif;
 }
 
-@layer case{
-  
+@layer case {
+
   body {
-   @apply font-poppins font-medium 
+    @apply font-poppins font-medium relative
+  }
+
+  .group:hover .orangeSlider {
+    animation: hoverIn 0.3s ease-in-out forwards;
+  }
+
+  .group:not(:hover) .orangeSlider {
+    animation: hoverOut 0.3s ease-in-out forwards;
+  }
+
+  @keyframes hoverIn {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes hoverOut {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
   }
 }

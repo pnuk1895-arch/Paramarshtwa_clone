@@ -7,6 +7,7 @@ import FeasibilityStudies from "../../assets/OurServices/Feasibility.png"
 import ProjectManagement from "../../assets/OurServices/ProjectManagement.png"
 
 import "swiper/css";
+import { Link } from "react-router-dom";
 
 const services = [
     {
@@ -14,24 +15,28 @@ const services = [
         description:
             "Master planning is a comprehensive approach to the long-term development and design of a specific area, such as a city, community.",
         image: MasterPlanning,
+        path:'Master_Planning'
     },
     {
         title: "Architecture",
         description:
             "Architecture is the art and science of designing and constructing buildings, structures, and spaces that are functional, aesthetically pleasing.",
-        image: Architecture
+        image: Architecture,
+        path:"/Architecture"
     },
     {
         title: "Feasibility studies",
         description:
             "Feasibility studies are assessments conducted to evaluate the viability of a project or initiative before it is undertaken.",
-        image: FeasibilityStudies
+        image: FeasibilityStudies,
+        path:'/Feasibility_studies'
     },
     {
         title: "Project Management",
         description:
             "Project management involves the planning, organization, and execution of a project to achieve specific goals within a defined timeframe and budget.",
-        image: ProjectManagement
+        image: ProjectManagement,
+        path:'/Project_management'
     },
 ];
 
@@ -112,19 +117,20 @@ export default function OurServices() {
                                         <img
                                             src={service.image}
                                             alt={service.title}
-                                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                            className="h-full w-full object-cover transition-transform duration-500 scale-110 group-hover:scale-100"
                                         />
 
                                         {/* ARROW */}
-                                        <button
-                                            type="button"
-                                            className="absolute bottom-0 right-0 flex h-10 w-16 items-center justify-center bg-orange-600 text-white transition-colors duration-300 hover:bg-red-600"
-                                        >
-                                            <FaArrowRight className="text-lg" />
-                                        </button>
+                                        <div className="absolute invisible inset-0 opacity-20 bg-blue-400 transition-colors duration-900 ease-in group-hover:visible">
+                                        </div>
 
                                     </div>
-
+                                        <Link
+                                            to={service.path}
+                                            className="absolute top-36 right-0 flex h-8 w-18 items-center justify-center bg-orange-600 opacity-0 text-white transition-all duration-600 group-hover:bg-red-600 group-hover:opacity-100 group-hover:-translate-x-14 "
+                                        >
+                                            <FaArrowRight className="text-lg" />
+                                        </Link>
 
                                     {/* CONTENT */}
                                     <div className="flex min-h-60 flex-1 flex-col p-5 sm:min-h-64 sm:p-6">

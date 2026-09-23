@@ -5,6 +5,7 @@ import Image3 from "../../assets/OurGallery/Image3.png"
 import Image4 from "../../assets/OurGallery/Image4.png"
 import Image5 from "../../assets/OurGallery/Image5.png"
 import Image6 from "../../assets/OurGallery/Image6.png"
+import { useState } from "react";
 
 const galleryImages = [
   {
@@ -40,6 +41,13 @@ const galleryImages = [
 ];
 
 export default function Gallery() {
+
+  const [Ishover, setIshover ]= useState("")
+
+  function hoverHandler(e){
+      setIshover(e.currentTarget.matches(':hover'))
+  }
+
   return (
     <section className="w-full bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <div className="mx-auto w-full max-w-7xl">
@@ -56,29 +64,23 @@ export default function Gallery() {
           {galleryImages.map((item) => (
             <div
               key={item.id}
-              className="group relative overflow-hidden"
+              className="relative group overflow-hidden"
+              onTransitionEnd={(e)=> hoverHandler(e)}
             >
               {/* Image */}
               <img
                 src={item.image}
                 alt={item.alt}
-                className="aspect-video w-full object-covera"
+                className="aspect-video w-full object-cover"
               />
-
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 invisible flex items-center justify-center bg-[#D1641A] opacity transition-all duration-300  ">
-                <button
-                  type="button"
-                  aria-label={`View ${item.alt}`}
-                  className="flex h-14 w-14 items-center justify-center bg-slate-900 text-white transition-transform duration-300 group-hover:scale-100"
-                >
-                  <Plus className="h-8 w-8" strokeWidth={2} />
+              <div className='orangeSlider absolute inset-0 bg-orange-700 opacity-90' >
+                <button className="absolute flex justify-center items-center top-34 left-10 invisible opacity-100 bg-black w-14 h-14 transition-all duration-400 ease-in group-hover:visible">
+                      <Plus className="text-white w-10 h-10" />
                 </button>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

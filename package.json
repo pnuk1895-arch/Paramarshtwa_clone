@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@iconify/css-react": "^1.0.2",
+    "@iconify/react": "^6.0.2",
     "@tailwindcss/vite": "^4.3.3",
     "lucide-react": "^1.45.0",
     "react": "^19.2.8",

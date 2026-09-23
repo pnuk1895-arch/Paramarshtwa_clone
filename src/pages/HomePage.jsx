@@ -10,6 +10,7 @@ import ExperienceArea from '../component/HomePageComponent/ExperienceArea'
 import Gallery from '../component/HomePageComponent/GallerySection'
 import JoinOurTeam from '../component/HomePageComponent/JoinTeamSection'
 import Footer from '../component/CommonComponents/footer'
+import WhatsappIcon from '../component/CommonComponents/icons/whatsappIcon'
 
 const HomePage = () => {
   return (
@@ -27,6 +28,7 @@ const HomePage = () => {
           <JoinOurTeam/>
         </main>
         <Footer/>
+        <WhatsappIcon/>
     </>
   )
 }
