@@ -6,6 +6,7 @@ import Image4 from "../../../assets/OurGallery/Image4.png"
 import Image5 from "../../../assets/OurGallery/Image5.png"
 import Image6 from "../../../assets/OurGallery/Image6.png"
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const galleryImages = [
   {
@@ -43,6 +44,7 @@ const galleryImages = [
 export default function Gallery() {
 
   const [Ishover, setIshover]= useState("")
+  const location =useLocation()
 
   function handlerShowImage(id){
     
@@ -78,9 +80,9 @@ export default function Gallery() {
                 className="aspect-video w-full object-cover"
               />
               <div className='orangeSlider absolute inset-0 bg-orange-700 opacity-90' >
-                <button type="button" onClick={handlerShowImage(item.id)} className="absolute flex justify-center items-center top-34 left-10 invisible opacity-100 bg-black w-14 h-14 transition-all duration-400 ease-in group-hover:visible">
+                <Link to="/GalleryImage"  state={{id:item.id, backgroundLocation:location}} className="absolute flex justify-center items-center top-34 left-10 invisible opacity-100 bg-black w-14 h-14 transition-all duration-400 ease-in group-hover:visible">
                       <Plus className="text-white w-10 h-10" />
-                </button>
+                </Link>
               </div>
             </div>
           ))}

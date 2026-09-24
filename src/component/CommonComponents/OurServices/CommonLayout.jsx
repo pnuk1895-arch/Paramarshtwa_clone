@@ -10,7 +10,7 @@ const Services = [
     ['/Contract_Documentations', "Contract Documentations"],
     ['/Due_Diligence', 'Due Diligence'],
     ["/Proof_Diligence", 'Proof Diligence'],
-    ["/Technical_Audits", 'Technical Audits/Lndependent Checking'],
+    ["/Technical_Audits", 'Technical Audits/Independent Checking'],
     ["/Bid_Process_Management", "Bid Process Management"],
     ["/Contruction_Management", "Construction Management"],
     ["/Contract_Adminstration", "Contract Administration"],
@@ -33,7 +33,7 @@ const CommonLayout = ({ data }) => {
                     <div className=" relative overflow-hidden">
                         <img
                             src={data.image}
-                            alt={data.name || ''}
+                            alt={''}
                             className="w-full object-cover object-center transition-transform duration-700 ease-out hover:scale-105 will-change-transform"
                         />
                          <div className="absolute inset-0 invisible transition-all group-hover:visible bg-red-400 opacity-40  "> 

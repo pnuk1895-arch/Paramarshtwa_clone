@@ -83,7 +83,7 @@ const Header = () => {
             path: "/sectors",
             dropdown: true,
             Css: 'group',
-            contents: [['Building', [["Residential", "/Residential"], ["Commercial", "/Commercial"], ["Education, Institutional", "/Education_Institutional"], ["Health care", "/HealthCare"], ["Hotels And Resorts", "/Hotels_And_Resorts"], ["IT And IT Enabled", "/IT_And_IT_Enabled"], ["Retail", "/Retail"]]], ['Transport System', [["MRT/LRT", "/MRT_LRT"], ["Railways", "/Railways"], ["Highway And Bridges", "/Highway_And_Bridges"]]], ['Urban Infrastructure', '/Urban_infrastructure'], ['Urban Land Development', '/Urban_land_development'], ['Urban Renewal', '/Urban_Renewal'], ['Environmental', '/Environment'], ['Industrial/SEZ', '/Industrial/SEZ'], ['Sewage And Drainage', '/Sewage_and_Drainage'], ['Water Supply & Sanitation', 'Water_supply&sanitation'], ['Sport Complexes', '/Sport_complexes'], ['Aviation', '/Aviation']]
+            contents: [['Building', [["Residential", "/Residential"], ["Commercial", "/Commercial"], ["Education, Institutional", "/Education_Institutional"], ["Health care", "/HealthCare"], ["Hotels And Resorts", "/Hotels_And_Resorts"], ["IT And IT Enabled", "/IT_And_IT_Enabled"], ["Retail", "/Retail"]]], ['Transport System', [["MRT/LRT", "/MRT_LRT"], ["Railways", "/Railways"], ["Highway And Bridges", "/Highway_And_Bridges"]]], ['Urban Infrastructure', '/Urban_Infrastructure'], ['Urban Land Development', '/Urban_Land_Development'], ['Urban Renewal', '/Urban_Renewal'], ['Environmental', '/Environmental'], ['Industrial/SEZ', '/Industrial/SEZ'], ['Sewage Andl Drainage', '/Sewage_And_Drainage'], ['Water Supply & Sanitation', '/Water_Supply_And_Sanitation'], ['Sport Complexes', '/Sport_Complexes'], ['Aviation', '/Aviation']]
 
         },
         {
@@ -91,7 +91,7 @@ const Header = () => {
             path: "/services",
             dropdown: true,
             Css: 'group',
-            contents: [['Fesibility Studies', '/Feasibility_studies'], ['Project Management', '/Project_management'], ['Master Planning', '/Master_Planning'], ['Architecture', '/Architecture'], ['Detailed Design', '/Detailed_design'], ['Value Engineering', '/Value_engineering'], ['Contract Documentations', '/Contract_documentations'], ['Due_Diligence', '/Due_diligence'], ['Proof Diligence', '/Proof_diligence'], ['Bid Process Management', '/Bid_project_menagement']]
+            contents: [['Fesibility Studies', '/Feasibility_studies'], ['Project Management', '/Project_Management'], ['Master Planning', '/Master_Planning'], ['Architecture', '/Architecture'], ['Detailed Design', '/Detailed_Design'], ['Value Engineering', '/Value_Engineering'], ['Contract Documentations', '/Contract_Documentations'], ['Due Diligence', '/Due_Diligence'], ['Proof Diligence', '/Proof_Diligence'], ['Bid Process Management', '/Bid_Process_Management']]
         },
         {
             name: "Our Services",
@@ -102,7 +102,7 @@ const Header = () => {
         },
         {
             name: "Contact Us",
-            path: "/contact",
+            path: "/Contact_Us",
             dropdown: false,
             Css: '',
             contents: ''

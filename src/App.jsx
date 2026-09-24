@@ -1,7 +1,6 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 
-// Home Page 
+// Home Page
 import HomePage from './pages/HomePage'
 
 // about page 
@@ -13,7 +12,7 @@ import OurManagementPage from './pages/AboutPages/OurManagementPage'
 // //contact page
 import ContactPage from './pages/ContactPage'
 
-// service 
+// service
 import ServicesPage from './pages/OurServicesPage'
 
 // service page 
@@ -56,7 +55,7 @@ import RetailsPage from './pages/Our_SectorsPages/BuildingPages.jsx/Retails'
 import RailwaysPage from './pages/Our_SectorsPages/Transport_SystemPages/Railways'
 import MRT_LRTPage from './pages/Our_SectorsPages/Transport_SystemPages/MRT_LRT'
 import HighWay_And_BridgesPage from './pages/Our_SectorsPages/Transport_SystemPages/Highway_And_Bridges'
-
+import GalleryImageShow from './component/HomePageComponent/Gallery/GalleryImageShow'
 
 const data = [
 
@@ -73,7 +72,7 @@ const data = [
   ['/Services', ServicesPage],
   // our services page 
   ['/Feasibility_studies', Feasibility_studiesPage],
-  ["/Project_management", Project_managementPage],
+  ["/Project_Management", Project_managementPage],
   ["/Master_Planning", Master_PlanningPage],
   ["/Architecture", ArchitecturePage],
   ["/Detailed_Design", Detailed_designPage],
@@ -94,13 +93,13 @@ const data = [
   ["/Testing_And_Commissioning", Testing_And_CommissioningPage],
   // our sectors 
   ["/Urban_Infrastructure", UrbanInfrastructurePage],
-  ["/UrbanLandDevelopment", UrbanLandDevelopmentPage],
-  ["/UrbanRenewal", UrbanRenewalPage],
+  ["/Urban_Land_Development", UrbanLandDevelopmentPage],
+  ["/Urban_Renewal", UrbanRenewalPage],
   ['/Environmental', EnvironmentalPage],
-  ["/IndustrialSEZ", IndustrialSEZPage],
-  ["/sewage_And_Drainage", S_AND_DPage],
-  ['/water_supply_And_sanitation', Water_S_A_SPage],
-  ["/SportComlpexes", SportComlpexesPage],
+  ["/Industrial/SEZ", IndustrialSEZPage],
+  ["/Sewage_And_Drainage", S_AND_DPage],
+  ['/Water_Supply_And_Sanitation', Water_S_A_SPage],
+  ["/Sport_Complexes", SportComlpexesPage],
   ["/Aviation", AviationPage],
   // our Sectors /Building 
   ["/Residential", ResidentialPage],
@@ -113,19 +112,30 @@ const data = [
   //Transport System
   ["/Railways", RailwaysPage],
   ["/MRT_LRT",MRT_LRTPage],
-  ["/Highway_And_Bridges",HighWay_And_BridgesPage]
+  ["/Highway_And_Bridges",HighWay_And_BridgesPage],
+  //gallery image routes
+  ['/GalleryImage', GalleryImageShow]
 ]
 
 const App = () => {
+  const location=useLocation()
+
+  const backgroundURL = location.state?.backgroundLocation
 
   return (
-    <Routes>
-      {
-        data.map(([path, Component], index) => (
+    <>
+      <Routes location={backgroundURL || location }>
+        {data.map(([path, Component], index) => (
           <Route key={index} path={path} element={<Component />} />
-        ))
-      }
-    </Routes>
+        ))}
+      </Routes>
+
+      {backgroundURL && (
+        <Routes>
+          <Route path="/GalleryImage" element={<GalleryImageShow/>} />
+        </Routes>
+      )}
+    </>
 
   )
 }
