@@ -3,6 +3,7 @@ import Footer from '../../../component/CommonComponents/footer'
 import HeroSection from '../../../component/CommonComponents/heroSection'
 import CommonLayout from '../../../component/CommonComponents/OurSectors/CommonLayout'
 import Image from "../../../assets/Building/Education-Institutional.png"
+import Icons from '../../../component/CommonComponents/icons/Icons'
 
 export default function Education_InstitutionalPage()
 {
@@ -22,6 +23,7 @@ export default function Education_InstitutionalPage()
   <main>
     <HeroSection/>
     <CommonLayout data={data}/>
+    <Icons/>
   </main>
   <Footer/>
   </>

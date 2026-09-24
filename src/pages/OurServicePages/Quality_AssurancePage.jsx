@@ -3,6 +3,7 @@ import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import CommonLayout from "../../component/CommonComponents/OurServices/CommonLayout"
 import image from "../../assets/OurServices/QualityAssurance.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 export default function Quality_AssurancePage() {
 
   const data = {
@@ -22,6 +23,7 @@ export default function Quality_AssurancePage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

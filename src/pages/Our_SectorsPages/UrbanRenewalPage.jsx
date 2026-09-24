@@ -3,6 +3,7 @@ import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import CommonLayout from "../../component/CommonComponents/OurSectors/CommonLayout"
 import UrbanImage from "../../assets/OurSectors/Urban-renewal.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 export default function UrbanRenewalPage() {
   const data = {
@@ -21,6 +22,7 @@ export default function UrbanRenewalPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

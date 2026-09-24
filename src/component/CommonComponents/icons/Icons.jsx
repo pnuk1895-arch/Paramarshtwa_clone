@@ -7,21 +7,22 @@ export default function Icons() {
             <Link
                 to="tel:+919999997869"
                 className="
-                    fixed bottom-10 right-8 z-50
-                    flex h-14 w-14 items-center justify-center
-                    rounded-full
-                    bg-[#2853bf]
-                    shadow-lg shadow-blue-500/50
-                    animate-bounce
-                    transition-all duration-300
-                    hover:scale-110
-                    hover:brightness-125
-                    hover:shadow-xl hover:shadow-blue-500/70
-                "
+                phone-button
+                fixed bottom-10 right-8 z-50
+                flex h-14 w-14
+                items-center justify-center
+                rounded-full
+                bg-[#2853bf]
+                text-white
+                shadow-lg shadow-blue-500/50
+                transition-transform
+                duration-300
+                hover:scale-110
+            "
             >
                 <Icon
                     icon="basil:phone-solid"
-                    className="h-10 w-10 text-white"
+                    className="h-8 w-8"
                 />
             </Link>
 

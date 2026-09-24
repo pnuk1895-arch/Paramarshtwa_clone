@@ -3,6 +3,7 @@ import CommonLayout from "../../component/CommonComponents/OurSectors/CommonLayo
 import Header from "../../component/CommonComponents/Header"
 import Footer from "../../component/CommonComponents/footer"
 import Aviation from "../../assets/OurSectors/Aviation.png"
+import Icons from "../../component/CommonComponents/icons/Icons";
 
 export default function AviationPage() {
   const data = {
@@ -21,6 +22,7 @@ export default function AviationPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

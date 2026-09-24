@@ -3,6 +3,7 @@ import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import CommonLayout from "../../component/CommonComponents/OurSectors/CommonLayout"
 import Environment from "../../assets/OurSectors/EnvironmentalImage.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 export default function EnvironmentalPage() {
   const data = {
@@ -21,6 +22,7 @@ export default function EnvironmentalPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

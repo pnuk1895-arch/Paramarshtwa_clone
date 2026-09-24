@@ -2,6 +2,7 @@ import image from "../../assets/OurServices/ProjectManagement.png"
 import Footer from "../../component/CommonComponents/footer"
 import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
+import Icons from "../../component/CommonComponents/icons/Icons"
 import CommonLayout from "../../component/CommonComponents/OurServices/CommonLayout"
 
 const Project_managementPage = () => {
@@ -23,6 +24,7 @@ const Project_managementPage = () => {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

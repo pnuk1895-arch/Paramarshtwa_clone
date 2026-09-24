@@ -3,6 +3,7 @@ import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import CommonLayout from "../../component/CommonComponents/OurServices/CommonLayout"
 import image from "../../assets/OurServices/BidProcess.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 const data = {
   title: "Our Sectors",
@@ -23,6 +24,7 @@ const Bid_Process_ManagementPage = () => {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

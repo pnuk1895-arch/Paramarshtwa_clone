@@ -3,6 +3,7 @@ import Footer from "../../component/CommonComponents/footer"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import Header from "../../component/CommonComponents/Header"
 import image from "../../assets/OurServices/Feasibility.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 const data={
   title:"Our Sectors",
@@ -23,6 +24,7 @@ const Feasibility_studiesPage = () => {
         <main>
             <HeroSection Page={Page} />
             <CommonLayout data={data}/>
+            <Icons/>
         </main>
         <Footer/>
     </>

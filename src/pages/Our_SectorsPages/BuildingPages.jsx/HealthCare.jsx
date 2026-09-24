@@ -3,6 +3,7 @@ import Footer from '../../../component/CommonComponents/footer'
 import HeroSection from '../../../component/CommonComponents/heroSection'
 import CommonLayout from '../../../component/CommonComponents/OurSectors/CommonLayout'
 import Health from "../../../assets/Building/HealthCare.png"
+import Icons from '../../../component/CommonComponents/icons/Icons'
 
 export default function HealthCarePage()
 {
@@ -22,6 +23,7 @@ export default function HealthCarePage()
   <main>
     <HeroSection Page={Page} />
     <CommonLayout data={data}/>
+    <Icons/>
   </main>
   <Footer/>
   </>

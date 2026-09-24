@@ -2,6 +2,7 @@ import Header from "../../component/CommonComponents/Header"
 import About from "../../component/AboutComponent/Aboutcomponent"
 import Footer from "../../component/CommonComponents/footer"
 import HeroSection from '../../component/CommonComponents/heroSection'
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 export default function AboutPage() {
   const Page={
@@ -11,8 +12,11 @@ export default function AboutPage() {
   return (
     <>
       <Header/>
-      <HeroSection Page={Page} />
-      <About/>
+      <main>
+        <HeroSection Page={Page} />
+        <About/>
+        <Icons/>
+      </main>
       <Footer/>
     </>
   )

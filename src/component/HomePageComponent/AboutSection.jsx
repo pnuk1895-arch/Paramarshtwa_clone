@@ -79,7 +79,7 @@ export default function AboutSection() {
 
                         {/* Read More */}
                         <Link
-                            to="/about"
+                            to="/About_Us"
                             className="inline-flex items-center justify-center bg-linear-to-r from-red-600 to-orange-500 px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:from-red-700 hover:to-orange-600 sm:px-10 sm:text-lg"
                         >
                             Read More

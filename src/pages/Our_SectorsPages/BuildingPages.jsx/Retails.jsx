@@ -3,6 +3,7 @@ import Footer from '../../../component/CommonComponents/footer'
 import HeroSection from '../../../component/CommonComponents/heroSection'
 import CommonLayout from '../../../component/CommonComponents/OurSectors/CommonLayout'
 import Retail from "../../../assets/Building/Retail.png"
+import Icons from '../../../component/CommonComponents/icons/Icons'
 
 export default function RetailsPage() {
   const data = {
@@ -22,6 +23,7 @@ export default function RetailsPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

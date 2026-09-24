@@ -26,9 +26,11 @@ const HomePage = () => {
           <ExperienceArea/>
           <Gallery/>
           <JoinOurTeam/>
+          <Icons/>
         </main>
+        
         <Footer/>
-        <Icons/>
+        
     </>
   )
 }

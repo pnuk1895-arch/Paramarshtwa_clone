@@ -3,6 +3,7 @@ import Header from "../../component/CommonComponents/Header";
 import HeroSection from "../../component/CommonComponents/heroSection";
 import CommonLayout from "../../component/CommonComponents/OurSectors/CommonLayout";
 import Sport_complexes from "../../assets/OurSectors/Sport_complexes.png"
+import Icons from "../../component/CommonComponents/icons/Icons";
 
 export default function SportComlpexesPage() {
   const data = {
@@ -21,6 +22,7 @@ export default function SportComlpexesPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

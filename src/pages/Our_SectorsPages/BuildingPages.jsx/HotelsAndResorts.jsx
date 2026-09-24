@@ -3,6 +3,7 @@ import Footer from '../../../component/CommonComponents/footer'
 import HeroSection from '../../../component/CommonComponents/heroSection'
 import CommonLayout from '../../../component/CommonComponents/OurSectors/CommonLayout'
 import HotelsAndResorts from "../../../assets/Building/Hotels_and_Resorts.png"
+import Icons from '../../../component/CommonComponents/icons/Icons'
 
 export default function HotelsAndResortsPage()
 {
@@ -22,6 +23,7 @@ export default function HotelsAndResortsPage()
   <main>
     <HeroSection Page={Page} />
     <CommonLayout data={data}/>
+    <Icons/>
   </main>
   <Footer/>
   </>

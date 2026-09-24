@@ -3,6 +3,7 @@ import HeroSection from "../../component/CommonComponents/heroSection"
 import CommonLayout from "../../component/CommonComponents/OurSectors/CommonLayout"
 import UrbanImage from "../../assets/OurSectors/Urban_Land_Development.png"
 import Footer from "../../component/CommonComponents/footer"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 export default function UrbanLandDevelopmentPage() {
   const data = {
@@ -21,6 +22,7 @@ export default function UrbanLandDevelopmentPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
 

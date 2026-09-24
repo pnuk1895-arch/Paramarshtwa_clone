@@ -3,6 +3,7 @@ import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import CommonLayout from "../../component/CommonComponents/OurServices/CommonLayout"
 import image from "../../assets/OurServices/MasterPlanning.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 const Master_PlanningPage = () => {
   const data=  {
@@ -22,6 +23,7 @@ const Master_PlanningPage = () => {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer/>
     </>

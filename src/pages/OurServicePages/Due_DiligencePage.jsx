@@ -3,6 +3,7 @@ import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import CommonLayout from "../../component/CommonComponents/OurServices/CommonLayout"
 import image from "../../assets/OurServices/DueDiligence.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 const Due_DiligencePage = () => {
 
@@ -23,6 +24,7 @@ const Due_DiligencePage = () => {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

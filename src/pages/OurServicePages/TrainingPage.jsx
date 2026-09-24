@@ -3,6 +3,7 @@ import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import CommonLayout from "../../component/CommonComponents/OurServices/CommonLayout"
 import image from "../../assets/OurServices/Training.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 export default function TrainingPage() {
   const data = {
@@ -22,6 +23,7 @@ export default function TrainingPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

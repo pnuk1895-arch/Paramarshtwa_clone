@@ -3,6 +3,7 @@ import Footer from "../../component/CommonComponents/footer"
 import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import image from "../../assets/OurServices/Architecture.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
  const ArchitecturePage = () => {
 
@@ -25,6 +26,7 @@ import image from "../../assets/OurServices/Architecture.png"
        <main>
            <HeroSection Page={Page} />
            <CommonLayout data={data} />
+           <Icons/>
        </main>
        <Footer/>
     </>

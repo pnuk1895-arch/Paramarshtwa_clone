@@ -3,6 +3,7 @@ import Footer from '../../../component/CommonComponents/footer'
 import HeroSection from '../../../component/CommonComponents/heroSection'
 import CommonLayout from '../../../component/CommonComponents/OurSectors/CommonLayout'
 import Commercial from "../../../assets/Building/Commercial.png"
+import Icons from '../../../component/CommonComponents/icons/Icons'
 
 export default function CommercialPage()
 {
@@ -22,6 +23,7 @@ export default function CommercialPage()
   <main>
     <HeroSection/>
     <CommonLayout data={data}/>
+    <Icons/>
   </main>
   <Footer/>
   </>

@@ -3,6 +3,7 @@ import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import CommonLayout from "../../component/CommonComponents/OurSectors/CommonLayout"
 import WaterImage from "../../assets/OurSectors/Water_supply_&_Sanitation.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 export default function Water_S_A_SPage() {
   const data = {
@@ -21,6 +22,7 @@ export default function Water_S_A_SPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

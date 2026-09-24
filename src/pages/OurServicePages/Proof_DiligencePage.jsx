@@ -3,6 +3,7 @@ import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import CommonLayout from "../../component/CommonComponents/OurServices/CommonLayout"
 import image from "../../assets/OurServices/ProofChecking.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 export default function Proof_DiligencePage() {
   const data = {
@@ -23,6 +24,7 @@ export default function Proof_DiligencePage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

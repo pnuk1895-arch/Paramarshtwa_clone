@@ -25,6 +25,7 @@ export default function Asset_ManagementPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <icons/>
       </main>
       <Footer />
     </>

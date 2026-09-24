@@ -1,6 +1,7 @@
 import Footer from "../../component/CommonComponents/footer"
 import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
+import Icons from "../../component/CommonComponents/icons/Icons"
 import CommonLayout from "../../component/CommonComponents/OurServices/CommonLayout"
 
 const Detailed_designPage = () => {
@@ -21,6 +22,7 @@ const Detailed_designPage = () => {
       <main>
         <HeroSection Page={Page}/>
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer/>
     </>

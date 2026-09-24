@@ -3,6 +3,7 @@ import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import CommonLayout from "../../component/CommonComponents/OurSectors/CommonLayout"
 import Sewage_And_Drainage from "../../assets/OurSectors/Sewage&Drainage.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 export default function S_AND_DPage() {
   const data = {
@@ -21,6 +22,7 @@ export default function S_AND_DPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

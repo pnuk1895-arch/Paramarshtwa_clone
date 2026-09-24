@@ -1,6 +1,7 @@
 import Footer from "../../component/CommonComponents/footer"
 import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
+import Icons from "../../component/CommonComponents/icons/Icons"
 import DetailAbout from "../../component/HomePageComponent/detailAbout"
 
 
@@ -12,8 +13,11 @@ const MissionAndVisionPage = () => {
   return (
     <>
         <Header/>
-        <HeroSection Page={Page} />
-        <DetailAbout/>
+        <main>
+          <HeroSection Page={Page} />
+          <DetailAbout/>
+          <Icons/>
+        </main>
         <Footer/>
     </>
    

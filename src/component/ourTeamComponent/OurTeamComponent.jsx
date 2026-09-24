@@ -4,6 +4,7 @@ import {
   FaInstagram,
   FaLinkedinIn
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const teamMembers = [
   {
@@ -105,8 +106,8 @@ const OurTeamComponent = () => {
 
 
       {/* ================= WHATSAPP BUTTON ================= */}
-      <a
-        href="https://wa.me/919999997869"
+      <Link
+        to="https://wa.me/919999997869"
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
@@ -132,12 +133,12 @@ const OurTeamComponent = () => {
             d="M8.5 9.5c.2-.5.5-.6.8-.6h.6c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.6.7c.3.1.4.3.4.5v.6c0 .3-.1.6-.6.8-.5.2-1.8.1-3.2-.7-1.2-.7-2.2-1.7-2.9-2.9-.8-1.4-.9-2.7-.7-3.3Z"
           />
         </svg>
-      </a>
+      </Link>
 
 
       {/* ================= CALL BUTTON ================= */}
-      <a
-        href="tel:+919999997869"
+      <Link
+        to="tel:+919999997869"
         aria-label="Call us"
         className="fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 shadow-lg transition duration-300 hover:scale-110 hover:bg-blue-700"
       >
@@ -155,7 +156,7 @@ const OurTeamComponent = () => {
             d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"
           />
         </svg>
-      </a>
+      </Link>
 
     </section>
   );

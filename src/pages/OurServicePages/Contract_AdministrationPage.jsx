@@ -2,6 +2,7 @@ import image from '../../assets/OurServices/ContractAdministration.png'
 import Footer from '../../component/CommonComponents/footer'
 import Header from '../../component/CommonComponents/Header'
 import HeroSection from '../../component/CommonComponents/heroSection'
+import Icons from '../../component/CommonComponents/icons/Icons'
 import CommonLayout from '../../component/CommonComponents/OurServices/CommonLayout'
 
 export default function Contract_AdministrationPage() {
@@ -22,6 +23,7 @@ export default function Contract_AdministrationPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

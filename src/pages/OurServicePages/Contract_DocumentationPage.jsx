@@ -3,6 +3,7 @@ import Header from "../../component/CommonComponents/Header"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import CommonLayout from "../../component/CommonComponents/OurServices/CommonLayout"
 import image from "../../assets/OurServices/Contract.png"
+import Icons from "../../component/CommonComponents/icons/Icons"
 
 const Contract_DocumentationPage = () => {
 
@@ -23,6 +24,7 @@ const Contract_DocumentationPage = () => {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

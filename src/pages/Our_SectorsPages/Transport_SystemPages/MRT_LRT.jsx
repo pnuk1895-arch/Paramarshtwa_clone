@@ -3,6 +3,7 @@ import Footer from '../../../component/CommonComponents/footer'
 import HeroSection from '../../../component/CommonComponents/heroSection'
 import CommonLayout from '../../../component/CommonComponents/OurSectors/CommonLayout'
 import MRT_LRT from "../../../assets/Transport_systems/MRT-LRT.png"
+import Icons from '../../../component/CommonComponents/icons/Icons'
 
 export default function MRT_LRTPage() {
   const data = {
@@ -21,6 +22,7 @@ export default function MRT_LRTPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

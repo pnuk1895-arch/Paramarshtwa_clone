@@ -3,6 +3,7 @@ import Footer from '../../../component/CommonComponents/footer'
 import HeroSection from '../../../component/CommonComponents/heroSection'
 import CommonLayout from '../../../component/CommonComponents/OurSectors/CommonLayout'
 import Railways from "../../../assets/Transport_systems/Railways.png"
+import Icons from '../../../component/CommonComponents/icons/Icons'
 
 export default function RailwaysPage() {
   const data = {
@@ -21,6 +22,7 @@ export default function RailwaysPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

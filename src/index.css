@@ -38,4 +38,34 @@
       transform: translateX(-100%);
     }
   }
+
+  @keyframes phoneFloat {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  @keyframes phoneGlow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+    }
+  }
+
+  .phone-button {
+    animation:
+      phoneFloat 1.8s ease-in-out infinite,
+      phoneGlow 1.8s ease-out infinite;
+  }
 }

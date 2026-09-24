@@ -3,6 +3,7 @@ import Footer from '../../../component/CommonComponents/footer'
 import HeroSection from '../../../component/CommonComponents/heroSection'
 import CommonLayout from '../../../component/CommonComponents/OurSectors/CommonLayout'
 import ITImage from "../../../assets/Building/IT_and_IT_enabled.png"
+import Icons from '../../../component/CommonComponents/icons/Icons'
 
 export default function IT_And_IT_EnabledPage() {
   const data = {
@@ -21,6 +22,7 @@ export default function IT_And_IT_EnabledPage() {
       <main>
         <HeroSection Page={Page} />
         <CommonLayout data={data} />
+        <Icons/>
       </main>
       <Footer />
     </>

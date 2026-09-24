@@ -21,6 +21,7 @@ const Header = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
     const [openDropdown, setOpenDropdown] = useState(null);
     const [changeHeaderPosition, setchangeHeaderPosition] = useState()
+    const [openSubDropdown, setOpenSubDropdown] = useState(null);
     const headerRef = useRef()
     const navigate = useNavigate()
 
@@ -50,6 +51,15 @@ const Header = () => {
         setOpenDropdown(
             openDropdown === index ? null : index
         );
+
+        // Close nested dropdown when changing top-level dropdown
+        setOpenSubDropdown(null);
+    };
+
+    const toggleSubDropdown = (key) => {
+        setOpenSubDropdown(
+            openSubDropdown === key ? null : key
+        );
     };
 
 
@@ -58,6 +68,7 @@ const Header = () => {
             name: "Home",
             path: "/",
             Css: "",
+            dropdown: false,
             contents: ''
         },
         {
@@ -85,7 +96,7 @@ const Header = () => {
         {
             name: "Our Services",
             path: "/Services",
-            dropdown: true,
+            dropdown: false,
             Css: '',
             contents: ''
         },
@@ -534,7 +545,7 @@ const Header = () => {
             {
                 isMenuVisible && (
 
-                    <div className="fixed inset-0 z-50 overflow-hidden md:hidden">
+                    <div className="fixed inset-0 z-50 overflow-y-scroll md:hidden">
 
 
                         {/* BLACK PANEL */}
@@ -598,9 +609,9 @@ const Header = () => {
                                         className="border-b border-slate-200"
                                     >
 
-                                        <div className="flex items-center">
+                                        {/* ================= TOP LEVEL ================= */}
 
-                                            {/* Link */}
+                                        <div className="flex items-center">
 
                                             <Link
                                                 to={link.path}
@@ -609,13 +620,16 @@ const Header = () => {
                                                         closeMenu();
                                                     }
                                                 }}
-                                                className={`flex-1 px-5 py-3 text-base transition-all duration-300 ease-in-out hover:text-red-600 ${index === 0 ? "text-red-600" : "text-slate-700"}`}
+                                                className={`flex-1 px-5 py-3 text-base transition-all duration-300 ease-in-out hover:text-red-600 ${index === 0
+                                                        ? "text-red-600"
+                                                        : "text-slate-700"
+                                                    }`}
                                             >
                                                 {link.name}
                                             </Link>
 
 
-                                            {/* Arrow */}
+                                            {/* Top level arrow */}
 
                                             {link.dropdown && (
 
@@ -627,7 +641,10 @@ const Header = () => {
                                                 >
 
                                                     <FiChevronDown
-                                                        className={`transition-transform duration-300 ease-in-out ${openDropdown === index ? "rotate-180" : ""}`}
+                                                        className={`transition-transform duration-300 ease-in-out ${openDropdown === index
+                                                                ? "rotate-180"
+                                                                : ""
+                                                            }`}
                                                     />
 
                                                 </button>
@@ -637,28 +654,126 @@ const Header = () => {
                                         </div>
 
 
-                                        {/* DROPDOWN */}
+                                        {/* ================= TOP LEVEL DROPDOWN ================= */}
 
                                         {link.dropdown && openDropdown === index && (
 
-                                            <div className="bg-slate-50 px-5 py-3">
+                                            <div className="bg-slate-50">
 
-                                                <Link
-                                                    to={`${link.path}/one`}
-                                                    onClick={closeMenu}
-                                                    className="block py-2 text-sm text-slate-600 transition-all duration-300 ease-in-out hover:text-red-600"
-                                                >
-                                                    Option One
-                                                </Link>
+                                                {link.contents.map(
+                                                    ([content, path], downIndex) => {
+
+                                                        /*
+                                                            If path is an array,
+                                                            this is a nested dropdown.
+                            
+                                                            Example:
+                            
+                                                            [
+                                                                "Building",
+                                                                [
+                                                                    ["Residential", "/Residential"],
+                                                                    ["Commercial", "/Commercial"]
+                                                                ]
+                                                            ]
+                                                        */
+
+                                                        const isNestedDropdown =
+                                                            Array.isArray(path);
+
+                                                        const subKey = `${index}-${downIndex}`;
 
 
-                                                <Link
-                                                    to={`${link.path}/two`}
-                                                    onClick={closeMenu}
-                                                    className="block py-2 text-sm text-slate-600 transition-all duration-300 ease-in-out hover:text-red-600"
-                                                >
-                                                    Option Two
-                                                </Link>
+                                                        return (
+
+                                                            <div
+                                                                key={`${content}-${downIndex}`}
+                                                                className="border-t border-slate-200"
+                                                            >
+
+                                                                {/* ================= NESTED DROPDOWN ================= */}
+
+                                                                {isNestedDropdown ? (
+
+                                                                    <>
+
+                                                                        <button
+                                                                            type="button"
+                                                                            onClick={() =>
+                                                                                toggleSubDropdown(
+                                                                                    subKey
+                                                                                )
+                                                                            }
+                                                                            className="flex w-full items-center justify-between px-7 py-3 text-left text-sm text-slate-600 transition-all duration-300 ease-in-out hover:text-red-600"
+                                                                        >
+
+                                                                            <span>
+                                                                                {content}
+                                                                            </span>
+
+                                                                            <FiChevronDown
+                                                                                className={`transition-transform duration-300 ease-in-out ${openSubDropdown === subKey
+                                                                                        ? "rotate-180"
+                                                                                        : ""
+                                                                                    }`}
+                                                                            />
+
+                                                                        </button>
+
+
+                                                                        {/* ================= NESTED ITEMS ================= */}
+
+                                                                        {openSubDropdown === subKey && (
+
+                                                                            <div className="bg-white">
+
+                                                                                {path.map(
+                                                                                    (
+                                                                                        [
+                                                                                            subContent,
+                                                                                            subPath
+                                                                                        ],
+                                                                                        subIndex
+                                                                                    ) => (
+
+                                                                                        <Link
+                                                                                            key={`${subContent}-${subIndex}`}
+                                                                                            to={subPath}
+                                                                                            onClick={closeMenu}
+                                                                                            className="block border-t border-slate-100 px-10 py-2.5 text-sm text-slate-500 transition-all duration-300 ease-in-out hover:text-red-600"
+                                                                                        >
+                                                                                            {subContent}
+                                                                                        </Link>
+
+                                                                                    )
+                                                                                )}
+
+                                                                            </div>
+
+                                                                        )}
+
+                                                                    </>
+
+                                                                ) : (
+
+                                                                    /* ================= NORMAL DROPDOWN ITEM ================= */
+
+                                                                    <Link
+                                                                        to={path}
+                                                                        onClick={closeMenu}
+                                                                        className="block px-7 py-3 text-sm text-slate-600 transition-all duration-300 ease-in-out hover:text-red-600"
+                                                                    >
+                                                                        {content}
+                                                                    </Link>
+
+                                                                )}
+
+                                                            </div>
+
+                                                        );
+
+                                                    }
+                                                )}
 
                                             </div>
 
@@ -682,3 +797,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

@@ -12,6 +12,7 @@ import Header from "../../component/CommonComponents/Header";
 import Footer from "../../component/CommonComponents/footer"
 import HeroSection from "../../component/CommonComponents/heroSection"
 import TheCoreDesign from "../../component/OurManagementComponent/TheCoreDesign";
+import Icons from "../../component/CommonComponents/icons/Icons";
 
 const OurManagementPage = () => {
 
@@ -35,6 +36,7 @@ const OurManagementPage = () => {
       <FutureOfSCMG/>
       <TheCoreDesign/>
       <PlanningSystemComponent/>
+      <Icons/>
     </main>
     <Footer/>
     </>
