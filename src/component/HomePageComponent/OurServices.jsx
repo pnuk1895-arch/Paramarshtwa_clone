@@ -1,13 +1,15 @@
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { FaArrowRight } from "react-icons/fa";
-import Architecture from "../../assets/OurServices/Architecture.png"
-import MasterPlanning from "../../assets/OurServices/MasterPlanning.png"
-import FeasibilityStudies from "../../assets/OurServices/Feasibility.png"
-import ProjectManagement from "../../assets/OurServices/ProjectManagement.png"
+import { Link } from "react-router-dom";
+
+import Architecture from "../../assets/OurServices/Architecture.png";
+import MasterPlanning from "../../assets/OurServices/MasterPlanning.png";
+import FeasibilityStudies from "../../assets/OurServices/Feasibility.png";
+import ProjectManagement from "../../assets/OurServices/ProjectManagement.png";
 
 import "swiper/css";
-import { Link } from "react-router-dom";
 
 const services = [
     {
@@ -15,32 +17,36 @@ const services = [
         description:
             "Master planning is a comprehensive approach to the long-term development and design of a specific area, such as a city, community.",
         image: MasterPlanning,
-        path:'Master_Planning'
+        path: "/Master_Planning",
     },
     {
         title: "Architecture",
         description:
             "Architecture is the art and science of designing and constructing buildings, structures, and spaces that are functional, aesthetically pleasing.",
         image: Architecture,
-        path:"/Architecture"
+        path: "/Architecture",
     },
     {
         title: "Feasibility studies",
         description:
             "Feasibility studies are assessments conducted to evaluate the viability of a project or initiative before it is undertaken.",
         image: FeasibilityStudies,
-        path:'/Feasibility_studies'
+        path: "/Feasibility_studies",
     },
     {
         title: "Project Management",
         description:
             "Project management involves the planning, organization, and execution of a project to achieve specific goals within a defined timeframe and budget.",
         image: ProjectManagement,
-        path:'/Project_management'
+        path: "/Project_management",
     },
 ];
 
 export default function OurServices() {
+
+    const [swiperInstance, setSwiperInstance] = useState(null);
+    const [mobileDot, setMobileDot] = useState(0);
+    const [desktopDot, setDesktopDot] = useState(0);
 
     const sliderServices = [
         ...services,
@@ -48,25 +54,57 @@ export default function OurServices() {
         ...services,
     ];
 
-    return (
-        <section className=" w-full h-160 overflow-hidden bg-slate-950 py-12 ">
+    const handleSlideChange = (swiper) => {
 
-            {/* ================= HEADING ================= */}
+        // Get original service index
+        const realIndex =
+            swiper.realIndex % services.length;
+
+        // Mobile → 4 dots
+        setMobileDot(realIndex);
+
+        // sm and above → 2 dots
+        setDesktopDot(Math.floor(realIndex / 2));
+    };
+
+    const goToMobileSlide = (index) => {
+
+        if (!swiperInstance) return;
+
+        swiperInstance.slideToLoop(index);
+    };
+
+    const goToDesktopSlide = (index) => {
+
+        if (!swiperInstance) return;
+
+        const slideIndex = index * 2;
+
+        swiperInstance.slideToLoop(slideIndex);
+    };
+
+    return (
+        <section className="h-160 w-full overflow-hidden bg-slate-950 py-12">
+
+            {/* HEADING */}
+
             <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
-                <h2 className="mb-9 text-3xl font-bold text-white sm:text-3xl lg:mb-10 lg:text-4xl">
+                <h2 className="mb-9 text-3xl font-bold text-white lg:mb-10 lg:text-4xl">
                     Our Services
                 </h2>
 
             </div>
 
 
-            {/* ================= CARDS ================= */}
-            <div className=" w-full h-116 sm:max-h-110 sm:px-2 lg:max-h-110 xl:pl-34 xl:h-120 overflow-hidden ">
+            {/* SLIDER */}
+
+            <div className="h-116 w-full overflow-hidden sm:h-110 sm:px-2 xl:h-120 xl:pl-34">
 
                 <Swiper
-
                     modules={[Autoplay]}
+                    onSwiper={setSwiperInstance}
+                    onSlideChange={handleSlideChange}
 
                     loop={true}
 
@@ -87,55 +125,102 @@ export default function OurServices() {
                     breakpoints={{
                         0: {
                             slidesPerView: 1,
+                            slidesPerGroup: 1,
                         },
 
                         640: {
                             slidesPerView: 2,
+                            slidesPerGroup: 2,
                         },
 
                         1024: {
-                            slidesPerView: 3
+                            slidesPerView: 3,
+                            slidesPerGroup: 2,
                         },
 
                         1280: {
                             slidesPerView: 4.5,
+                            slidesPerGroup: 2,
                         },
                     }}
                 >
 
                     {sliderServices.map((service, index) => (
 
-                        <SwiperSlide key={`${service.title}-${index}`}>
+                        <SwiperSlide
+                            key={`${service.title}-${index}`}
+                        >
 
                             <div className="px-2">
 
-                                <article className="group flex flex-col overflow-hidden bg-white  ">
+                                <article className="group flex flex-col overflow-hidden bg-white">
 
                                     {/* IMAGE */}
+
                                     <div className="relative aspect-video overflow-hidden">
 
                                         <img
                                             src={service.image}
                                             alt={service.title}
-                                            className="h-full w-full object-cover transition-transform duration-500 scale-110 group-hover:scale-100"
+                                            className="
+                                                h-full
+                                                w-full
+                                                scale-110
+                                                object-cover
+                                                transition-transform
+                                                duration-500
+                                                group-hover:scale-100
+                                            "
+                                        />
+
+                                        {/* ORANGE OVERLAY */}
+
+                                        <div
+                                            className="
+                                                absolute
+                                                inset-0
+                                                bg-blue-400
+                                                opacity-0
+                                                transition-opacity
+                                                duration-500
+                                                group-hover:opacity-20
+                                            "
                                         />
 
                                         {/* ARROW */}
-                                        <div className="absolute invisible inset-0 opacity-20 bg-blue-400 transition-colors duration-900 ease-in group-hover:visible">
-                                        </div>
 
-                                    </div>
                                         <Link
                                             to={service.path}
-                                            className="absolute top-36 right-0 flex h-8 w-18 items-center justify-center bg-orange-600 opacity-0 text-white transition-all duration-600 group-hover:bg-red-600 group-hover:opacity-100 group-hover:-translate-x-14 "
+                                            className="
+                                                absolute
+                                                right-0
+                                                top-36
+                                                flex
+                                                h-8
+                                                w-18
+                                                translate-x-14
+                                                items-center
+                                                justify-center
+                                                bg-orange-600
+                                                text-white
+                                                opacity-0
+                                                transition-all
+                                                duration-500
+                                                group-hover:translate-x-0
+                                                group-hover:opacity-100
+                                            "
                                         >
                                             <FaArrowRight className="text-lg" />
                                         </Link>
 
+                                    </div>
+
+
                                     {/* CONTENT */}
+
                                     <div className="flex min-h-60 flex-1 flex-col p-5 sm:min-h-64 sm:p-6">
 
-                                        <h4 className="mb-4 text-lg whitespace-nowrap font-bold leading-tight text-slate-900 sm:text-xl">
+                                        <h4 className="mb-4 whitespace-nowrap text-lg font-bold leading-tight text-slate-900 sm:text-xl">
                                             {service.title}
                                         </h4>
 
@@ -154,6 +239,63 @@ export default function OurServices() {
                     ))}
 
                 </Swiper>
+
+            </div>
+
+
+            {/* ================= MOBILE DOTS ================= */}
+
+            <div className="mt-6 flex justify-center gap-3 sm:hidden">
+
+                {[0, 1, 2, 3].map((dot) => (
+
+                    <button
+                        key={dot}
+                        type="button"
+                        onClick={() => goToMobileSlide(dot)}
+                        className={`
+                            h-3
+                            w-3
+                            rounded-full
+                            transition-all
+                            duration-300
+                            ${
+                                mobileDot === dot
+                                    ? "bg-red-600"
+                                    : "bg-slate-400"
+                            }
+                        `}
+                    />
+
+                ))}
+
+            </div>
+
+
+            {/* ================= TABLET + DESKTOP DOTS ================= */}
+
+            <div className="mt-6 ml-8 hidden justify-start gap-3 sm:flex xl:invisible ">
+
+                {[0, 1].map((dot) => (
+
+                    <button
+                        key={dot}
+                        type="button"
+                        onClick={() => goToDesktopSlide(dot)}
+                        className={`
+                            h-3
+                            w-3
+                            transition-all
+                            duration-300
+                            ${
+                                desktopDot === dot
+                                    ? "bg-red-600"
+                                    : "bg-slate-400"
+                            }
+                        `}
+                    />
+
+                ))}
 
             </div>
 

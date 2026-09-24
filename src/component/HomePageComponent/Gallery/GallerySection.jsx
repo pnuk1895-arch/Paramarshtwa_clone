@@ -1,10 +1,10 @@
 import { Plus } from "lucide-react";
-import Image1 from "../../assets/OurGallery/Image1.png"
-import Image2 from "../../assets/OurGallery/Image2.png"
-import Image3 from "../../assets/OurGallery/Image3.png"
-import Image4 from "../../assets/OurGallery/Image4.png"
-import Image5 from "../../assets/OurGallery/Image5.png"
-import Image6 from "../../assets/OurGallery/Image6.png"
+import Image1 from "../../../assets/OurGallery/Image1.png"
+import Image2 from "../../../assets/OurGallery/Image2.png"
+import Image3 from "../../../assets/OurGallery/Image3.png"
+import Image4 from "../../../assets/OurGallery/Image4.png"
+import Image5 from "../../../assets/OurGallery/Image5.png"
+import Image6 from "../../../assets/OurGallery/Image6.png"
 import { useState } from "react";
 
 const galleryImages = [
@@ -42,7 +42,11 @@ const galleryImages = [
 
 export default function Gallery() {
 
-  const [Ishover, setIshover ]= useState("")
+  const [Ishover, setIshover]= useState("")
+
+  function handlerShowImage(id){
+    
+  }
 
   function hoverHandler(e){
       setIshover(e.currentTarget.matches(':hover'))
@@ -74,7 +78,7 @@ export default function Gallery() {
                 className="aspect-video w-full object-cover"
               />
               <div className='orangeSlider absolute inset-0 bg-orange-700 opacity-90' >
-                <button className="absolute flex justify-center items-center top-34 left-10 invisible opacity-100 bg-black w-14 h-14 transition-all duration-400 ease-in group-hover:visible">
+                <button type="button" onClick={handlerShowImage(item.id)} className="absolute flex justify-center items-center top-34 left-10 invisible opacity-100 bg-black w-14 h-14 transition-all duration-400 ease-in group-hover:visible">
                       <Plus className="text-white w-10 h-10" />
                 </button>
               </div>
