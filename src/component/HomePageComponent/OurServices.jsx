@@ -153,11 +153,11 @@ export default function OurServices() {
 
                             <div className="px-2">
 
-                                <article className="group flex flex-col overflow-hidden bg-white">
+                                <article className="group relative flex flex-col overflow-hidden bg-white">
 
                                     {/* IMAGE */}
 
-                                    <div className="relative aspect-video overflow-hidden">
+                                    <div className="aspect-video overflow-hidden">
 
                                         <img
                                             src={service.image}
@@ -178,7 +178,10 @@ export default function OurServices() {
                                         <div
                                             className="
                                                 absolute
-                                                inset-0
+                                                top-0
+                                                left-0
+                                                right-0
+                                                bottom-64
                                                 bg-blue-400
                                                 opacity-0
                                                 transition-opacity
@@ -206,7 +209,7 @@ export default function OurServices() {
                                                 opacity-0
                                                 transition-all
                                                 duration-500
-                                                group-hover:translate-x-0
+                                                group-hover:-translate-x-14
                                                 group-hover:opacity-100
                                             "
                                         >
