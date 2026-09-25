@@ -17,17 +17,17 @@ const HeroSection = ({ Page }) => {
 
       <div className="
             w-full
-            max-w-7xl
+            max-w-6xl
             h-20 
             absolute    
             flex 
-            justify-between 
-            items-center 
+            flex-col
+            justify-between
+            items-start 
             text-white 
             font-poppins 
             left-1/2
             -translate-x-1/2
-            px-12
             top-52
             md:top-84
             lg:top-64
@@ -39,7 +39,6 @@ const HeroSection = ({ Page }) => {
             ease-in-out
           ">
         <div className="flex flex-col justify-start items-start gap-4 transition-all duration-300">
-          <p className="text-base">Welcome to Paramarshtwa</p>
           <h2 className="sm:text-4xl text-4xl font-bold transition-all duration-300">{Page.Category}</h2>
         </div>
         <div className="flex justify-center items-center gap-2 text-xl font-medium">

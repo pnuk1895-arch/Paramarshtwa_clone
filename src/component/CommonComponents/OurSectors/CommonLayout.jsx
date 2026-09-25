@@ -17,7 +17,7 @@ const CommonLayout = ({ data }) => {
     
 
     return (
-        <section className="bg-white px-4 py-12 sm:px-6 md:px-8 lg:px-10 xl:px-12 transition-all duration-500 ease-in-out">
+        <section className="bg-white px-4 py-12 sm:px-6 md:px-8 lg:px-10  transition-all duration-500 ease-in-out">
             <div className=" mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-3 transition-all duration-500 ease-in-out">
                 {/* Left Main Content */}
                 <div className="group col-span-1 lg:col-span-2 flex flex-col transition-all duration-500 ease-in-out">

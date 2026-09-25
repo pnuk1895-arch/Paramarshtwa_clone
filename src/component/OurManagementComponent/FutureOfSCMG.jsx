@@ -2,8 +2,8 @@ import { FaCheck } from "react-icons/fa";
 
 const FutureOfSCMG = () => {
   return (
-    <section className="bg-white py-12 sm:py-16 lg:py-16">
-            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-12 sm:py-16 lg:py-16  px-4 sm:px-6 md:px8 lg:px-10">
+            <div className="mx-auto w-full max-w-6xl">
     
               <div className="mx-auto max-w-6xl text-center">
     

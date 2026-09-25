@@ -81,7 +81,7 @@ export default function JoinOurTeam() {
                                         {job.title}
                                     </h3>
 
-                                    <p className="mt-2 max-w-2xl text-sm leading-6 text-white sm:text-base sm:leading-7">
+                                    <p className="mt-2 w-full text-sm leading-6 text-white sm:text-base sm:leading-7">
                                         {job.description}
                                     </p>
 

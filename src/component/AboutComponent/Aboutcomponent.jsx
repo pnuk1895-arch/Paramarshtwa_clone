@@ -4,9 +4,9 @@ import WelcomeImage from '../../assets/heroImage/heroImage3.png'
 
 const About = () => {
     return (
-        <section className=" bg-white py-12 w-full px-4 sm:px-8 md:px-12 lg:px-24 xl:px-36 z-20">
+        <section className=" bg-white py-12 w-full px-4 sm:px-6 md:px-8 lg:px-10 z-20 flex justify-center">
         
-            <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-12 ">
+            <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-12 w-full max-w-6xl ">
 
                 {/* Left - Text */}
                 <div className="flex flex-col gap-5">

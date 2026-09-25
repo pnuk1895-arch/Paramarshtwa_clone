@@ -34,12 +34,12 @@ const cards = [
 
 export default function DetailAbout() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <section className="min-h-screen bg-slate-50 text-slate-900">
 
       {/* ================= HERO ================= */}
-      <main className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 sm:py-16 md:px-8 min-[1155px]:px-0! lg:py-20">
 
-        <section className="mx-auto mb-10 max-w-4xl text-center sm:mb-14">
+        <div className="mx-auto mb-10 max-w-4xl text-center sm:mb-14">
 
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-4xl">
             Engineering The Future, Managing Success
@@ -49,10 +49,10 @@ export default function DetailAbout() {
             Your Dream Project Awaits — Get Started Today!
           </p>
 
-        </section>
+        </div>
 
         {/* ================= CARDS ================= */}
-        <section className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
 
           {cards.map((card) => {
             const Icon = card.icon;
@@ -85,9 +85,9 @@ export default function DetailAbout() {
             );
           })}
 
-        </section>
+        </div>
 
-      </main>
-    </div>
+      </div>
+    </section>
   );
 }

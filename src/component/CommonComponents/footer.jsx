@@ -25,11 +25,11 @@ const Evermore="https://www.evermolpro.com/"
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#10172e]">
+    <footer className="w-full bg-[#10172e] flex flex-col items-center">
 
      
       {/* ================= MAIN FOOTER ================= */}
-      <div className="mx-auto max-w-7xl px-6 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
+      <div className="max-w-6xl w-full px-4 my-14 sm:px-6 sm:my-16 min-[1155px]:px-0! lg:my-20">
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
 
@@ -163,7 +163,7 @@ export default function Footer() {
       </div>
 
       {/* ================= COPYRIGHT ================= */}
-      <div className="bg-orange-600 px-6 py-5 text-center">
+      <div className="bg-orange-600 px-6 py-5 text-center w-full">
         <p className="text-sm text-white sm:text-base">
           All rights reserved. Designed &amp; Developed By :
           <Link to={Evermore} target="_blank" className="font-semibold"> Evermore Tech</Link>

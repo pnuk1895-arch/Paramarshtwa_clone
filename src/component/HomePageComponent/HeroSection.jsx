@@ -61,7 +61,11 @@ const HeroSection = () => {
                 md:scale-105
                 lg:h-152
                 lg:translate-y-9
-                lg:scale-105"
+                lg:scale-105
+                min-[1670px]:object-[center_-200px]
+                min-[1670px]:scale-100!
+                min-[1670px]:h-200!
+                "
               />
             </div>
           </SwiperSlide>
@@ -69,7 +73,7 @@ const HeroSection = () => {
       </Swiper>
 
       {/* 3. Map your custom React dots over the array */}
-      <div className="absolute right-4 top-2/3 z-5 flex -translate-y-1/2 flex-col items-center gap-3 sm:right-5 md:right-6 lg:right-30">
+      <div className="absolute right-4 top-2/3 z-5 flex -translate-y-1/2 flex-col items-center gap-3 min-[1440px]:gap-6! sm:right-5 md:right-6 lg:right-30">
         {sliderImages.map((_, index) => {
           const isActive = activeIndex === index;
 
@@ -79,12 +83,12 @@ const HeroSection = () => {
               onClick={() => swiperInstance?.slideToLoop(index)}
               aria-label={`Go to slide ${index + 1}`}
               className={`
-                flex h-4 w-4 items-center justify-center rounded-full bg-white transition-all
+                flex h-4 w-4 min-[1440px]:h-6! min-[1440px]:w-6! items-center justify-center rounded-full bg-white transition-all
                 ${isActive ? 'border-2 border-orange-500' : 'border-2 border-transparent'}
               `}
             >
               <FaCircle
-                className={`text-[0.45rem] ${isActive ? 'text-orange-500' : 'text-white'}`}
+                className={`text-[0.45rem] min-[1440px]:text-[0.60rem] ${isActive ? 'text-orange-500' : 'text-white'}`}
               />
             </button>
           );

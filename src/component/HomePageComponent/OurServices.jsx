@@ -87,8 +87,8 @@ export default function OurServices() {
         <section className="h-160 w-full overflow-hidden bg-slate-950 py-12">
 
             {/* HEADING */}
-
-            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-8 lg:px-10px xl:px-0!">
+            <div className="w-full">
 
                 <h2 className="mb-9 text-3xl font-bold text-white lg:mb-10 lg:text-4xl">
                     Our Services
@@ -99,7 +99,7 @@ export default function OurServices() {
 
             {/* SLIDER */}
 
-            <div className="h-116 w-full overflow-hidden sm:h-110 sm:px-2 xl:h-120 xl:pl-34">
+            <div className="h-116 w-full xl:w-330.5 min-[1440px]:w-[1932px]! overflow-hidden sm:h-110 xl:h-120 ">
 
                 <Swiper
                     modules={[Autoplay]}
@@ -120,7 +120,7 @@ export default function OurServices() {
 
                     slidesPerView={5}
                     slidesPerGroup={1}
-                    spaceBetween={1}
+                    spaceBetween={20}
 
                     breakpoints={{
                         0: {
@@ -135,13 +135,17 @@ export default function OurServices() {
 
                         1024: {
                             slidesPerView: 3,
-                            slidesPerGroup: 2,
+                            slidesPerGroup: 1,
                         },
 
                         1280: {
                             slidesPerView: 4.5,
-                            slidesPerGroup: 2,
+                            slidesPerGroup: 1,
                         },
+                        1440:{
+                            slidesPerView:6.5,
+                            slidesPerGroup:1
+                        }
                     }}
                 >
 
@@ -151,7 +155,7 @@ export default function OurServices() {
                             key={`${service.title}-${index}`}
                         >
 
-                            <div className="px-2">
+                            <div className="">
 
                                 <article className="group relative flex flex-col overflow-hidden bg-white">
 
@@ -301,6 +305,7 @@ export default function OurServices() {
                 ))}
 
             </div>
+        </div>
 
         </section>
     );

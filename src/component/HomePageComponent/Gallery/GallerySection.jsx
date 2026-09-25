@@ -55,8 +55,8 @@ export default function Gallery() {
   }
 
   return (
-    <section className="w-full bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-      <div className="mx-auto w-full max-w-7xl">
+    <section className="w-full bg-white px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:px-10 lg:py-18">
+      <div className="mx-auto w-full max-w-6xl">
 
         {/* Heading */}
         <div className="mb-12 text-center sm:mb-14 lg:mb-16">

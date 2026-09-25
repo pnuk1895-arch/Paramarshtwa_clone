@@ -13,8 +13,8 @@ const TheCoreDesign = () => {
     ]
 
     return (
-        <section className="bg-slate-50 py-12 sm:py-16 lg:py-16">
-            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section className="bg-slate-50 py-12 sm:py-16 lg:py-16  px-4 sm:px-6 md:px-8 lg:px-10">
+            <div className="mx-auto w-full max-w-6xl">
 
                 <div className="text-center">
 

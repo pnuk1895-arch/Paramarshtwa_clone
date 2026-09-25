@@ -153,8 +153,8 @@ const ServiceItem = ({ service, index }) => {
   const isEven = index % 2 === 0;
 
   return (
-    <section className="border-b border-gray-300 py-10 md:py-12 lg:py-14">
-      <div className="grid grid-cols-1 items-center lg:grid-cols-2">
+    <section className="border-b border-gray-300 py-10 md:py-12 lg:py-14 px-4 sm:px-6 md:px-8 lg:px-10 ">
+      <div className=" max-w-6xl w-full mx-auto grid grid-cols-1 items-center lg:grid-cols-2">
 
         {/* CONTENT */}
         <div

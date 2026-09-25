@@ -25,9 +25,9 @@ const testimonialText =
 
 export default function Testimonials() {
   return (
-    <section className="bg-slate-950 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 ">
+    <section className="bg-slate-950 px-4 py-12 sm:px-6 md:px-8 sm:py-16 lg:px-10 lg:py-20 ">
 
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
 
         {/* ================= HEADING ================= */}
         <h2 className="text-center text-2xl font-bold text-white sm:text-3xl lg:text-4xl">

@@ -4,11 +4,11 @@ import AboutImage from '../../assets/AboutImage/AboutImage.png'
 
 export default function AboutSection() {
     return (
-        <section className="w-full bg-slate-50 py-12 sm:py-16 lg:py-20">
+        <section className="w-full bg-slate-50 py-12 sm:py-16  lg:py-20">
 
-            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto w-full max-w-6xl">
 
-                <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-8 lg:gap-12">
+                <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 md:gap-8 lg:gap-12">
 
                     {/* Image */}
                     <div className="w-full">
@@ -21,7 +21,7 @@ export default function AboutSection() {
 
 
                     {/* Content */}
-                    <div className="w-full">
+                    <div className="w-full px-4 sm:px-6 md:px-8 lg:px-0!">
 
                         {/* Heading */}
                         <h2 className="mb-8 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">

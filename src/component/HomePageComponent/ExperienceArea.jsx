@@ -2,9 +2,9 @@ import experienceImage from '../../assets/ExperienceImage.png'
 
 export default function ExperienceArea() {
     return (
-        <section className="w-full bg-slate-50 py-12 sm:py-16 lg:py-20">
+        <section className="w-full bg-slate-50 py-12 px-4 sm:py-16 sm:px-6 md:px-8 lg:py-20 lg:px-10">
 
-            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto w-full max-w-6xl">
 
                 <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-12">
 
