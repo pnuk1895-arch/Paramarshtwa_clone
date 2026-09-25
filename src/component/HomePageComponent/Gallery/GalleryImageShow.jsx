@@ -11,7 +11,7 @@ import image6 from "../../../assets/OurGallery/Image6.png"
 
 import "swiper/css";
 import "swiper/css/navigation";
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 
 const image = [
@@ -20,8 +20,10 @@ const image = [
 
 export default function GalleryImageShow() {
 
+    const [swiper, setSwiper] = useState(null)
     const location= useLocation()
-
+    console.log(location)
+    const clickedId= location.state?.id
     
 
     useEffect(()=>{
@@ -33,6 +35,21 @@ export default function GalleryImageShow() {
             }
         )
     },[])
+
+    useEffect(()=>{
+
+        if (!swiper || clickedId == null) return;
+
+        const index= image.findIndex(([image, id])=>{
+            return id === clickedId
+        })
+
+        if(index !== -1)
+        {
+            swiper.slideTo(index)
+        }
+        
+    },[swiper, clickedId])
     
     return (
         <section className="fixed inset-0 z-50 h-screen w-full! overflow-hidden bg-black/80">
@@ -40,6 +57,7 @@ export default function GalleryImageShow() {
                 modules={[Navigation]}
                 navigation
                 slidesPerView={1}
+                onSwiper={setSwiper}
                 className="h-full! w-full!"
             >
                 {
