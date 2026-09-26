@@ -42,17 +42,7 @@ const galleryImages = [
 ];
 
 export default function Gallery() {
-
-  const [Ishover, setIshover]= useState("")
   const location =useLocation()
-
-  function handlerShowImage(id){
-    
-  }
-
-  function hoverHandler(e){
-      setIshover(e.currentTarget.matches(':hover'))
-  }
 
   return (
     <section className="w-full bg-white px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:px-10 lg:py-18">

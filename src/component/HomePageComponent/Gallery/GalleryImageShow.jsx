@@ -1,6 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation } from "swiper/modules"
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
+import {X, RectangleHorizontal, Slash } from "lucide-react"
+import { BsFillGrid3X3GapFill } from "react-icons/bs";
+import { IoIosShareAlt } from "react-icons/io";
+import { FaPlay } from "react-icons/fa";
 
 import image1 from "../../../assets/OurGallery/Image1.png"
 import image2 from "../../../assets/OurGallery/Image2.png"
@@ -22,7 +26,7 @@ export default function GalleryImageShow() {
 
     const [swiper, setSwiper] = useState(null)
     const location= useLocation()
-    console.log(location)
+    const Navigate= useNavigate()
     const clickedId= location.state?.id
     
 
@@ -51,8 +55,27 @@ export default function GalleryImageShow() {
         
     },[swiper, clickedId])
     
+    // function closeImage(){
+    //     Navigate('/')
+    // }
+    
     return (
         <section className="fixed inset-0 z-50 h-screen w-full! overflow-hidden bg-black/80">
+            <div className="absolute left-4 top-4">
+                <p className="text-base text-[#FBF7F5]">
+                    5 / 6
+                </p>
+            </div>
+            <div  className="absolute top-4 right-4 flex items-center gap-4">
+                
+                <FaPlay className="h-4 w-4 text-gray-400 transition-colors duration-500 ease-in hover:text-white" />
+                <RectangleHorizontal className="h-6 w-6 text-gray-400 transition-colors duration-500 ease-in hover:text-white " />
+                <BsFillGrid3X3GapFill className="h-4 w-4 text-gray-400 transition-colors duration-500 ease-in hover:text-white"  />
+                <IoIosShareAlt className="h-6 w-6 text-gray-400 transition-colors duration-500 ease-in hover:text-white" />
+                <button type="button" onClick={()=>console.log("click")} className=" text-gray-400 transition-colors duration-500 ease-in hover:text-white!" >
+                    <X className="h-6 w-6" />
+                </button>
+            </div>
             <Swiper
                 modules={[Navigation]}
                 navigation
